@@ -33,6 +33,21 @@ tab.newButton("Zombie Animation", "Change your animation", function()
 end)
 
 
+tab.newButton("FPS Boost", "Boost ur FPS", function()
+    https://raw.githubusercontent.com/raisenscripts/Premiumv2/main/FPS%20boost
+end)
+
+
+tab.newButton("Anti fling", "nobody can fling you", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Linux6699/DaHubRevival/main/AntiFling.lua'))()
+end)
+
+
+tab.newButton("Shazam", "Say Shazam!", function()
+    loadstring(game:Httpget("https://pastebin.com/raw/Ka0kUJWr"))()
+end)
+
+
 tab.newToggle("Toggle", "Toggle! (prints the state)", true, function(toggleState)
     if toggleState then
         print("On")
