@@ -12,41 +12,9 @@ tab.newButton("Orbit/cam Gui", "Open Orbit Gui.", function()
 end)
 
 
-tab.newButton("Blatand", "Use Q tool", function()
-    print('Hello!')
-end)
-
-
 tab.newButton("Tp walk v4", "Recommended for silent aim.", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/TheRealXORA/Roblox-Scripts/main/Tpwalk%20V4%20%5B%20BETA%20%5D.lua", true))()
 end)
-
-
-local tab = DrRayLibrary.newTab("Other Guis", "ImageIdHere")
-
-
-tab.newButton("Detayz", "Detayz gui", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/I4MMO/Detazy/main/Main", true))()
-end)
-
-
-local tab = DrRayLibrary.newTab("Mısc", "ImageIdHere")
-
-
-tab.newButton("Zombie Animation", "Change your animation", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/raisenscripts/Premiumv2/main/Zombie%20animation"))()
-end)
-
-
-tab.newButton("FPS Boost", "Boost ur FPS", function()
-    https://raw.githubusercontent.com/raisenscripts/Premiumv2/main/FPS%20boost
-end)
-
-
-tab.newButton("Become Shazam", "Say Shazam!", function()
-    loadstring(game:Httpget("https://pastebin.com/raw/Ka0kUJWr"))()
-end)
-
 
 tab.newToggle("Toggle", "Toggle! (prints the state)", true, function(toggleState)
     if toggleState then
