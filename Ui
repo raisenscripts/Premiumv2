@@ -12,6 +12,9 @@ tab.newButton("Orbit/cam Gui", "Open Orbit Gui", function()
 end)
 
 
+local tab = DrRayLibrary.newTab("test", "ImageIdHere")
+
+
 tab.newToggle("Toggle", "Toggle! (prints the state)", true, function(toggleState)
     if toggleState then
         print("On")
