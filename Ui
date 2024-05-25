@@ -1,0 +1,21 @@
+local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
+
+
+local window = DrRayLibrary:Load("Raisen", "Default")
+
+
+local tab = DrRayLibrary.newTab("Raisen", "ImageIdHere")
+
+
+tab.newButton("Orbit Guil", "Open Orbit Gui", function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/raisenscripts/Premiumv1/main/raisen%20premium%20gui"))()
+end)
+
+
+tab.newToggle("Toggle", "Toggle! (prints the state)", true, function(toggleState)
+    if toggleState then
+        print("On")
+    else
+        print("Off")
+    end
+end)
