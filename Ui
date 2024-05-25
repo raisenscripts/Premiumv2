@@ -7,8 +7,29 @@ local window = DrRayLibrary:Load("Raisen", "Default")
 local tab = DrRayLibrary.newTab("Lock/Rage", "ImageIdHere")
 
 
-tab.newButton("Orbit/cam Gui", "Open Orbit Gui", function()
+tab.newButton("Orbit/cam Gui", "Open Orbit Gui.", function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/raisenscripts/Premiumv2/main/Raisen-AuraX"))()
+end)
+
+
+tab.newButton("Tp walk v4", "Recommended for silent aim.", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TheRealXORA/Roblox-Scripts/main/Tpwalk%20V4%20%5B%20BETA%20%5D.lua", true))()
+end)
+
+
+local tab = DrRayLibrary.newTab("Other Guis", "ImageIdHere")
+
+
+tab.newButton("Detayz", "Detayz gui", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/I4MMO/Detazy/main/Main", true))()
+end)
+
+
+local tab = DrRayLibrary.newTab("Mısc", "ImageIdHere")
+
+
+tab.newButton("Anti lock", "unsolvable", function()
+    print('Hello!')
 end)
 
 
