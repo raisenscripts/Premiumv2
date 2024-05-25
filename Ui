@@ -12,11 +12,6 @@ tab.newButton("Orbit/cam Gui", "Open Orbit Gui.", function()
 end)
 
 
-tab.newButton("Mobile blatand", "Use with q tool", function()
-    loadstring(game:Httpget("https://raw.githubusercontent.com/raisenscripts/Premiumv2/main/Blatant"))()
-end)
-
-
 tab.newButton("Tp walk v4", "Recommended for silent aim.", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/TheRealXORA/Roblox-Scripts/main/Tpwalk%20V4%20%5B%20BETA%20%5D.lua", true))()
 end)
@@ -45,11 +40,6 @@ end)
 
 tab.newButton("Anti fling", "Anti flingv2", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Linux6699/DaHubRevival/main/AntiFling.lua"))()
-end)
-
-
-tab.newButton("Become Shazam", "Say Shazam!", function()
-    loadstring(game:Httpget("https://pastebin.com/raw/Ka0kUJWr"))()
 end)
 
 
