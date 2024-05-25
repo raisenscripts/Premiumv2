@@ -4,7 +4,7 @@ local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/
 local window = DrRayLibrary:Load("Raisen", "Default")
 
 
-local tab = DrRayLibrary.newTab("Raisen", "ImageIdHere")
+local tab = DrRayLibrary.newTab("Main", "ImageIdHere")
 
 
 tab.newButton("Orbit Guil", "Open Orbit Gui", function()
