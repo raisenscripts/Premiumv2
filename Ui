@@ -43,8 +43,8 @@ tab.newButton("FPS Boost", "Boost ur FPS", function()
 end)
 
 
-tab.newButton("Anti fling", "nobody can fling you", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Linux6699/DaHubRevival/main/AntiFling.lua'))()
+tab.newButton("Anti fling", "Anti flingv2", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Linux6699/DaHubRevival/main/AntiFling.lua"))()
 end)
 
 
