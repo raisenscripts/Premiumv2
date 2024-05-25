@@ -28,11 +28,6 @@ end)
 local tab = DrRayLibrary.newTab("Mısc", "ImageIdHere")
 
 
-tab.newButton("Anti lock", "press q to activate", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/raisenscripts/Premiumv2/main/Antilock"))()
-end)
-
-
 tab.newButton("Zombie Animation", "Change your animation", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/raisenscripts/Premiumv2/main/Zombie%20animation"))()
 end)
