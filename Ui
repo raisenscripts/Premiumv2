@@ -34,7 +34,7 @@ end)
 
 
 tab.newButton("Zombie Animation", "Change your animation", function()
-    print('Hello!')
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/raisenscripts/Premiumv2/main/Zombie%20animation"))()
 end)
 
 
