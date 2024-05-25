@@ -1,7 +1,7 @@
 local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
 
 
-local window = DrRayLibrary:Load("Raisen", "Default")
+local window = DrRayLibrary:Load("Raisen Premium", "Default")
 
 
 local tab = DrRayLibrary.newTab("Lock/Rage", "ImageIdHere")
@@ -28,7 +28,12 @@ end)
 local tab = DrRayLibrary.newTab("Mısc", "ImageIdHere")
 
 
-tab.newButton("Anti lock", "unsolvable", function()
+tab.newButton("Anti lock", "press q to activate", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/raisenscripts/Premiumv2/main/Antilock"))()
+end)
+
+
+tab.newButton("Zombie Animation", "Change your animation", function()
     print('Hello!')
 end)
 
