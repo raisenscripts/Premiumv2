@@ -4,10 +4,10 @@ local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/
 local window = DrRayLibrary:Load("Raisen", "Default")
 
 
-local tab = DrRayLibrary.newTab("Main", "ImageIdHere")
+local tab = DrRayLibrary.newTab("Lock/Rage", "ImageIdHere")
 
 
-tab.newButton("Orbit Guil", "Open Orbit Gui", function()
+tab.newButton("Orbit/cam Gui", "Open Orbit Gui", function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/raisenscripts/Premiumv1/main/raisen%20premium%20gui"))()
 end)
 
