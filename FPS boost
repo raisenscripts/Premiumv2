@@ -1,0 +1,105 @@
+-- enjoy
+local function sendNotification(title, text)
+    game.StarterGui:SetCore("SendNotification", {
+        Title = title,
+        Text = text,
+    })
+end
+
+sendNotification("Script Injected", "Raisen gui detected!")
+
+-- adjust these if u want - current settings recommended
+getgenv().optimizeGraphics = true
+getgenv().boostFPS = true
+
+local vim = game:GetService("VirtualInputManager")
+local setfpscap = setfpscap or function() end -- Ensure setfpscap function is defined
+
+local function disableDevConsole()
+    local devConsoleUI = game:GetService("CoreGui"):FindFirstChild("DevConsoleUI", true)
+    if devConsoleUI then
+        local mainView = devConsoleUI:FindFirstChild("MainView")
+        if mainView then
+            local screen = mainView.Parent and mainView.Parent.Parent and mainView.Parent.Parent.Parent
+            if screen then
+                screen.Enabled = false
+            end
+        end
+    end
+end
+
+local function enableDevConsole()
+    local devConsoleMaster = game:GetService("CoreGui"):FindFirstChild("DevConsoleMaster", true)
+    if devConsoleMaster then
+        devConsoleMaster.Enabled = true
+    end
+end
+
+local function pressF9()
+    vim:SendKeyEvent(true, "F9", 0, game)
+    wait()
+    vim:SendKeyEvent(false, "F9", 0, game)
+end
+
+local function checkDevConsole()
+    while true do
+        task.wait()
+        if not boostFPS then
+            continue
+        end
+        if not game:GetService("CoreGui"):FindFirstChild("DevConsoleUI", true):FindFirstChild("MainView") then
+            pressF9()
+        end
+    end
+end
+
+game.Loaded:Wait()
+
+if optimizeGraphics then
+    -- Adjust graphics settings
+    local t = game.Workspace.Terrain
+    t.WaterWaveSize = 0
+    t.WaterWaveSpeed = 0
+    t.WaterReflectance = 0
+    t.WaterTransparency = 0
+    game.Lighting.GlobalShadows = false
+    game.Lighting.FogEnd = 9e9
+    game.Lighting.Brightness = 0
+    settings().Rendering.QualityLevel = "Level01"
+    
+    -- Modify parts and effects
+    for _, v in ipairs(game:GetDescendants()) do
+        if v:IsA("BasePart") then
+            v.Material = Enum.Material.Plastic
+            v.Reflectance = 0
+        elseif v:IsA("Decal") or v:IsA("Texture") then
+            v.Transparency = 1
+        elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+            v.Lifetime = NumberRange.new(0)
+        elseif v:IsA("Explosion") then
+            v.BlastPressure = 1
+            v.BlastRadius = 1
+        elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") then
+            v.Enabled = false
+        elseif v:IsA("MeshPart") then
+            v.Material = Enum.Material.Plastic
+            v.Reflectance = 0
+            v.TextureID = 10385902758728957
+        end
+    end
+
+    for _, e in ipairs(game.Lighting:GetChildren()) do
+        if e:IsA("PostEffect") then
+            e.Enabled = false
+        end
+    end
+end
+
+game.DescendantAdded:Connect(function(descendant)
+    if descendant.Name == "MainView" and descendant.Parent.Name == "DevConsoleUI" and boostFPS then
+        disableDevConsole()
+    end
+end)
+
+pressF9()
+spawn(checkDevConsole)
