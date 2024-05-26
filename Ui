@@ -31,3 +31,20 @@ local miscTab = DrRayLibrary.newTab("Misc", "ImageIdHere")
 miscTab.newButton("Zombie Animation", "get *Fe* zombie animation", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/raisenscripts/Premiumv2/main/Zombie%20animation"))()
 end)
+
+
+-- Script exucute edildiğinde karakter otomatik olarak bir mesaj yazar
+
+-- Servisleri al
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+-- Chat mesajını gönder
+local function sendChatMessage(message)
+    local chatRemote = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest")
+    chatRemote:FireServer(message, "All")
+end
+
+-- Mesajı belirle ve gönder
+local message = "Raisen Loaded!"  -- Bu mesajı istediğiniz gibi değiştirebilirsiniz
+sendChatMessage(message)
