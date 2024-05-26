@@ -1,637 +1,448 @@
-getgenv().keytoclick = "C"
-tool = Instance.new("Tool")
-tool.RequiresHandle = false
-tool.Name = keytoclick
-tool.Activated:connect(function()
-    local vim = game:service("VirtualInputManager")
-vim:SendKeyEvent(true, keytoclick, false, game)
-end)
-tool.Parent = game.Players.LocalPlayer.Backpack
+--// leak
 
-game.StarterGui:SetCore("SendNotification", {
-    Title = "Skibidi Gyat";
-    Text = "User Is premium!";
+repeat wait() until game:IsLoaded()
 
-})
+game:GetService("CorePackages").Packages:Destroy()
 
-local player = game.Players.LocalPlayer
-
-local function connectCharacterAdded()
-    player.CharacterAdded:Connect(onCharacterAdded)
-end
-
-connectCharacterAdded()
-
-player.CharacterRemoving:Connect(function()
-    tool.Parent = game.Players.LocalPlayer.Backpack
-end)
-
---Made By Xarcax, reworked by k0nkx/asainyuh, Haafli helped on orbit thx
-
---Heavily pasted btw just like
-
-local Library = loadstring(game:HttpGet("https://pastebin.com/raw/kpLzpNXc"))()
-
-local Window = Library:CreateWindow("Raisen Scripts", Vector2.new(300, 300), Enum.KeyCode.RightShift)
-local AkaliNotif =
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua"))()
-    
-local Notify = AkaliNotif.Notify
-
-local AimingTab = Window:CreateTab("Main")
-local MiscTab = Window:CreateTab("Misc")
-local TeleportTab = Window:CreateTab("Teleports")
-
-local testSection = MiscTab:CreateSector("Misc", "left")
-
-testSection:AddButton(
-    "RightClick",
-    function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/BalligusapoTT/BalligusapoTT/main/Leftclickballi'))()
+assert(getrawmetatable)
+grm = getrawmetatable(game)
+setreadonly(grm, false)
+old = grm.__namecall
+grm.__namecall = newcclosure(function(self, ...)
+    local args = {...}
+    if tostring(args[1]) == "TeleportDetect" then
+        return
+    elseif tostring(args[1]) == "CHECKER_1" then
+        return
+    elseif tostring(args[1]) == "CHECKER" then
+        return
+    elseif tostring(args[1]) == "GUI_CHECK" then
+        return
+    elseif tostring(args[1]) == "OneMoreTime" then
+        return
+    elseif tostring(args[1]) == "checkingSPEED" then
+        return
+    elseif tostring(args[1]) == "BANREMOTE" then
+        return
+    elseif tostring(args[1]) == "PERMAIDBAN" then
+        return
+    elseif tostring(args[1]) == "KICKREMOTE" then
+        return
+    elseif tostring(args[1]) == "BR_KICKPC" then
+        return
+    elseif tostring(args[1]) == "BR_KICKMOBILE" then
+        return
     end
-)
-
-local testSection = TeleportTab:CreateSector("Teleports", "left")
-
-testSection:AddButton("Double Barrel", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1039.59985, 18.8513641, -256.449951, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+    return old(self, ...)
 end)
 
-testSection:AddButton("Revolver", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-638.75, 18.8500004, -118.175011, -1, 0, 0, 0, 1, 0, 0, 0, -1)
-end)
-
-testSection:AddButton("Shotgun", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-578.623657, 5.47212696, -725.131531, 0, 0, 1, 0, 1, -0, -1, 0, 0)
-end)
-
-testSection:AddButton("Tactical Shotgun", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(470.877533, 45.1272316, -620.630676, 0.999999821, 0.000604254019, -2.60802135e-08, -0.000604254019, 0.999999821, -8.63220048e-05, -2.60802135e-08, 8.63220048e-05, 1)
-end)
-
-testSection:AddButton("Smg", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-577.123413, 5.47666788, -718.031433, -1, 0, 0, 0, 1, 0, 0, 0, -1)
-end)
-
-testSection:AddButton("RPG", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-794.814697, -42.5468521, -932.97998, 5.96046448e-08, 2.91038305e-11, 1, -0.000610388815, 0.999999821, 2.91038305e-11, -0.999999762, -0.000610388815, 5.96046448e-08)
-end)
-
-testSection:AddButton("Armor", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-607.978455, 7.44964886, -788.494263, -1.1920929e-07, 0, 1.00000012, 0, 1, 0, -1.00000012, 0, -1.1920929e-07)
-end)
-
-testSection:AddButton("PopCorn", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-995, 21.6998043, -153.100037, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-end)
-
-testSection:AddButton("Casino 1v1", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-962.72345, 21.2549973, -186.814987, -0.0274876002, 2.91178949e-05, 0.999621451, -5.5798846e-06, 1, -2.92823333e-05, -0.999621451, -6.38268148e-06, -0.0274876002)
-end)
-
-testSection:AddButton("Bank", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-402.123718, 21.75, -283.988617, 0.0159681588, -0.000121377925, -0.999872446, -2.60148026e-05, 1, -0.000121808866, 0.999872506, 2.79565484e-05, 0.0159681737)
-end)
-
-testSection:AddButton("Main Food", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-338.352173, 23.6826477, -297.2146, -0.0060598203, -1.03402984e-08, -0.999981582, -1.61653102e-09, 1, -1.03306892e-08, 0.999981582, 1.55389912e-09, -0.0060598203)
-end)
-    
-local testSection = AimingTab:CreateSector("camlock", "left")
-
-testSection:AddToggle(
-    "Enable",
-    false,
-    function(first)
-        getgenv().Enabled = first
-    end
-)
-
-testSection:AddDropdown(
-    "HitPart",
-    {"Head", "HumanoidRootPart", "UpperTorso", "LowerTorso", "Penis"},
-    "UpperTorso",
-    false,
-    function(Option)
-        getgenv().RecurringPoint = "Option"
-    end
-)
-
-testSection:AddTextbox(
-    "Cam Prediction",
-    7,
-    function(State)
-        getgenv().PredictionAmount = State
-    end
-)
-
-testSection:AddToggle(
-    "Smooth toggle",
-    false,
-    function(first)
-        getgenv().AimbotStrength = first
-    end
-)
-
-testSection:AddTextbox(
-    "Smoothness",
-    0.405,
-    function(State)
-        getgenv().AimbotStrengthAmount = State
-    end
-)
-
-testSection:AddTextbox(
-    "Radius",
-    50,
-    function(State)
-        getgenv().Radius = State
-    end
-)
-
-getgenv().RecurringPoint = "UpperTorso"
-getgenv().Hitbox = "UpperTorso"
-getgenv().Keybind = "c"
-getgenv().AimbotStrengthAmount = 0.405
-getgenv().PredictionAmount = 10
-getgenv().Radius = 50
-getgenv().UsePrediction = true
-getgenv().AimbotStrength = true
-getgenv().FirstPerson = true
-getgenv().ThirdPerson = true
-getgenv().TeamCheck = false
-getgenv().Enabled = false
-
--- // main script use with silent aim / / -- 
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/tenaaki/GenericAimbot/main/v1.0.0"))()
-
---]]
- 
---dont mess with he settings unless u know what ur doing
- 
-local Settings = {
-    rewrittenmain = {
-        Enabled = true,
-        Key = "c",
-        DOT = true,
-        AIRSHOT = true,
-        NOTIF = true, 
-        AUTOPRED = true, 
-        FOV = math.huge,
-        RESOLVER = false 
-    }
+local library = { 
+	flags = { }, 
+	items = { } 
 }
 
-local testSection = AimingTab:CreateSector("Aimlock", "Right")
+local players = game:GetService("Players")
+local uis = game:GetService("UserInputService")
+local runservice = game:GetService("RunService")
+local tweenservice = game:GetService("TweenService")
+local marketplaceservice = game:GetService("MarketplaceService")
+local textservice = game:GetService("TextService")
+local coregui = game:GetService("CoreGui")
+local httpservice = game:GetService("HttpService")
 
-testSection:AddToggle(
-    "Enabled",
-    Settings.rewrittenmain.Enabled,
-    function(State)
-        Settings.rewrittenmain.Enabled = State
-    end
-)
+local player = players.LocalPlayer
+local mouse = player:GetMouse()
+local camera = game.Workspace.CurrentCamera
 
-testSection:AddTextbox(
-    "Prediction",
-    0.135,
-    function(State)
-        getgenv().Prediction = State
-    end
-)
+library.theme = {
+    fontsize = 17,
+    titlesize = 18,
+    font = Enum.Font.Code,
+    background = "rbxassetid://0",
+    tilesize = 90,
+    cursor = false,
+    cursorimg = "https://t0.rbxcdn.com/42f66da98c40252ee151326a82aab51f",
+    backgroundcolor = Color3.fromRGB(20, 20, 20),
+    tabstextcolor = Color3.fromRGB(168,122,207),
+    bordercolor = Color3.fromRGB(75, 207, 255),
+    accentcolor = Color3.fromRGB(168,122,207),
+    accentcolor2 = Color3.fromRGB(88,65,108),
+    outlinecolor = Color3.fromRGB(20,20,20),
+    outlinecolor2 = Color3.fromRGB(30,30,30),--119, 64, 167
+    sectorcolor = Color3.fromRGB(30, 30, 30),
+    toptextcolor = Color3.fromRGB(255, 255, 255),
+    topheight = 48,
+    topcolor = Color3.fromRGB(30, 30, 30),
+    topcolor2 = Color3.fromRGB(12,12,12), -- Color3.fromRGB(12, 12, 12),
+    buttoncolor = Color3.fromRGB(49, 49, 49),
+    buttoncolor2 = Color3.fromRGB(29,29,29),
+    itemscolor = Color3.fromRGB(170, 170, 170),
+    itemscolor2 = Color3.fromRGB(255,255,255)
+}
 
-testSection:AddTextbox(
-    "Key",
-    Settings.rewrittenmain.Key,
-    function(State)
-        Settings.rewrittenmain.Key = State
-    end
-)
-
-testSection:AddToggle(
-    "Dot",
-    Settings.rewrittenmain.DOT,
-    function(State)
-        Settings.rewrittenmain.DOT = State
-    end
-)
-
-testSection:AddToggle(
-    "Airshot",
-    Settings.rewrittenmain.AIRSHOT,
-    function(State)
-        Settings.rewrittenmain.AIRSHOT = State
-    end
-)
-
-testSection:AddToggle(
-    "Notification",
-    Settings.rewrittenmain.NOTIF,
-    function(State)
-        Settings.rewrittenmain.NOTIF = State
-    end
-)
-
-testSection:AddToggle(
-    "Auto Prediction",
-    Settings.rewrittenmain.AUTOPRED,
-    function(State)
-        Settings.rewrittenmain.AUTOPRED = State
-    end
-)
-
-testSection:AddToggle(
-    "Resolver",
-    Settings.rewrittenmain.RESOLVER,
-    function(State)
-        Settings.rewrittenmain.RESOLVER = State
-    end
-)
-
-local testSection = AimingTab:CreateSector("Orbit", "left") 
-
-testSection:AddToggle(
-    "Enabled",
-    false,
-    function(first)
-        Settings.rewrittenmain.TargetStrafe = first
-    end
-)
-
-testSection:AddTextbox(
-    "Distance",
-    nil,
-    function(State)
-        Settings.rewrittenmain.StrafeRadius = State
-    end
-)
-
-testSection:AddTextbox(
-    "Height",
-    nil,
-    function(State)
-        Settings.rewrittenmain.StrafeHeight = State
-    end
-)
-
-testSection:AddTextbox(
-    "Speed",
-    nil,
-    function(State)
-        Settings.rewrittenmain.StrafeSpeed = State
-    end
-)
- 
-local SelectedPart = "UpperTorso"                              
-local Prediction = true
-local PredictionValue = 0.24                            
- 
- 
-    local AnchorCount = 0
-    local MaxAnchor = 50
- 
-    local CC = game:GetService"Workspace".CurrentCamera
-    local Plr;
-    local enabled = false
-    local accomidationfactor = 0.12348
-    local mouse = game.Players.LocalPlayer:GetMouse()
-    local placemarker = Instance.new("Part", game.Workspace)
- 
-    function makemarker(Parent, Adornee, Color, Size, Size2)
-        local e = Instance.new("BillboardGui", Parent)
-        e.Name = "PP"
-        e.Adornee = Adornee
-        e.Size = UDim2.new(Size, Size2, Size, Size2)
-        e.AlwaysOnTop = Settings.rewrittenmain.DOT
-        local a = Instance.new("Frame", e)
-        if Settings.rewrittenmain.DOT == true then
-        a.Size = UDim2.new(2, 2, 2)
-        else
-        a.Size = UDim2.new(0, 0, 0, 0)
-        end
-        if Settings.rewrittenmain.DOT == true then
-        a.Transparency = 0
-        a.BackgroundTransparency = 0
-        else
-        a.Transparency = 1
-        a.BackgroundTransparency = 1
-        end
-        a.BackgroundColor3 = Color
-        local g = Instance.new("UICorner", a)
-        if Settings.rewrittenmain.DOT == false then
-        g.CornerRadius = UDim.new(0, 0)
-        else
-        g.CornerRadius = UDim.new(1, 1)
-        end
-        return(e)
-    end
- 
- 
-    local data = game.Players:GetPlayers()
-    function noob(player)
-        local character
-        repeat wait() until player.Character
-        local handler = makemarker(guimain, player.Character:WaitForChild(SelectedPart), Color3.fromRGB(68, 214, 44), 0.3, 3)
-        handler.Name = player.Name
-        player.CharacterAdded:connect(function(Char) handler.Adornee = Char:WaitForChild(SelectedPart) end)
- 
- 
-        spawn(function()                                    
-            while wait() do                                     
-                if player.Character then                                    
-                end                                    
-            end                                     
-        end)                                    
-    end                                    
- 
-    for i = 1, #data do
-        if data[i] ~= game.Players.LocalPlayer then
-            noob(data[i])
-        end
-    end
- 
-    game.Players.PlayerAdded:connect(function(Player)
-        noob(Player)
+if library.theme.cursor and Drawing then
+    local success = pcall(function() 
+        library.cursor = Drawing.new("Image")
+        library.cursor.Data = game:HttpGet(library.theme.cursorimg)
+        library.cursor.Size = Vector2.new(64, 64)
+        library.cursor.Visible = uis.MouseEnabled
+        library.cursor.Rounding = 0
+        library.cursor.Position = Vector2.new(mouse.X - 32, mouse.Y + 6)
     end)
- 
-    spawn(function()
-        placemarker.Anchored = true
-        placemarker.CanCollide = false
-        if Settings.rewrittenmain.DOT == true then
-        placemarker.Size = Vector3.new(6, 6, 6)
-        else
-        placemarker.Size = Vector3.new(0, 0, 0)
-        end
-        placemarker.Transparency = 1
-        if Settings.rewrittenmain.DOT then
-        makemarker(placemarker, placemarker, Color3.fromRGB(68, 214, 44), 0.40, 0)
-        end
-    end)
- 
-    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(k)
-        if k == Settings.rewrittenmain.Key and Settings.rewrittenmain.Enabled then
-            if enabled == true then
-                enabled = false
-                if Settings.rewrittenmain.NOTIF == true then
-                    Plr = getClosestPlayerToCursor()
-                game.StarterGui:SetCore("SendNotification", {
-						Title = "Lock Notification",
-						Text = "Unlocked",
-						Icon = "",
-						Duration = 1,
-})
-            end
-            else
-                Plr = getClosestPlayerToCursor()
-                enabled = true
-                if Settings.rewrittenmain.NOTIF == true then
- 
-                    game.StarterGui:SetCore("SendNotification", {
-						Title = "Lock Notification",
-						Text = "Locked On :"..tostring(Plr.Name); 
-						Icon = "",
-						Duration = 1,
-})
- 
+    if success and library.cursor then
+        uis.InputChanged:Connect(function(input)
+            if uis.MouseEnabled then
+                if input.UserInputType == Enum.UserInputType.MouseMovement then
+                    library.cursor.Position = Vector2.new(input.Position.X - 32, input.Position.Y + 7)
                 end
+            end
+        end)
+        
+        game:GetService("RunService").RenderStepped:Connect(function()
+            uis.OverrideMouseIconBehavior = Enum.OverrideMouseIconBehavior.ForceHide
+            library.cursor.Visible = uis.MouseEnabled and (uis.MouseIconEnabled or game:GetService("GuiService").MenuIsOpen)
+        end)
+    elseif not success and library.cursor then
+        library.cursor:Remove()
+    end
+end
+
+function library:CreateWatermark(name, position)
+    local gamename = marketplaceservice:GetProductInfo(game.PlaceId).Name
+    local watermark = { }
+    watermark.Visible = true
+    watermark.text = " " .. name:gsub("{game}", gamename):gsub("{fps}", "0 FPS") .. " "
+
+    watermark.main = Instance.new("ScreenGui", coregui)
+    watermark.main.Name = "Watermark"
+    if syn then
+        syn.protect_gui(watermark.main)
+    end
+
+    if getgenv().watermark then
+        getgenv().watermark:Remove()
+    end
+    getgenv().watermark = watermark.main
+    
+    watermark.mainbar = Instance.new("Frame", watermark.main)
+    watermark.mainbar.Name = "Main"
+    watermark.mainbar.BorderColor3 = Color3.fromRGB(80, 80, 80)
+    watermark.mainbar.Visible = watermark.Visible
+    watermark.mainbar.BorderSizePixel = 0
+    watermark.mainbar.ZIndex = 5
+    watermark.mainbar.Position = UDim2.new(0, position and position.X or 10, 0, position and position.Y or 10)
+    watermark.mainbar.Size = UDim2.new(0, 0, 0, 25)
+
+    watermark.Gradient = Instance.new("UIGradient", watermark.mainbar)
+    watermark.Gradient.Rotation = 90
+    watermark.Gradient.Color = ColorSequence.new({ ColorSequenceKeypoint.new(0.00, Color3.fromRGB(40, 40, 40)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(10, 10, 10)) })
+
+    watermark.Outline = Instance.new("Frame", watermark.mainbar)
+    watermark.Outline.Name = "outline"
+    watermark.Outline.ZIndex = 4
+    watermark.Outline.BorderSizePixel = 0
+    watermark.Outline.Visible = watermark.Visible
+    watermark.Outline.BackgroundColor3 = library.theme.outlinecolor
+    watermark.Outline.Position = UDim2.fromOffset(-1, -1)
+
+    watermark.BlackOutline = Instance.new("Frame", watermark.mainbar)
+    watermark.BlackOutline.Name = "blackline"
+    watermark.BlackOutline.ZIndex = 3
+    watermark.BlackOutline.BorderSizePixel = 0
+    watermark.BlackOutline.BackgroundColor3 = library.theme.outlinecolor2
+    watermark.BlackOutline.Visible = watermark.Visible
+    watermark.BlackOutline.Position = UDim2.fromOffset(-2, -2)
+
+    watermark.label = Instance.new("TextLabel", watermark.mainbar)
+    watermark.label.Name = "FPSLabel"
+    watermark.label.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    watermark.label.BackgroundTransparency = 1.000
+    watermark.label.Position = UDim2.new(0, 0, 0, 0)
+    watermark.label.Size = UDim2.new(0, 238, 0, 25)
+    watermark.label.Font = library.theme.font
+    watermark.label.ZIndex = 6
+    watermark.label.Visible = watermark.Visible
+    watermark.label.Text = watermark.text
+    watermark.label.TextColor3 = Color3.fromRGB(255, 255, 255)
+    watermark.label.TextSize = 15
+    watermark.label.TextStrokeTransparency = 0.000
+    watermark.label.TextXAlignment = Enum.TextXAlignment.Left
+    watermark.label.Size = UDim2.new(0, watermark.label.TextBounds.X+10, 0, 25)
+    
+    watermark.topbar = Instance.new("Frame", watermark.mainbar)
+    watermark.topbar.Name = "TopBar"
+    watermark.topbar.ZIndex = 6
+    watermark.topbar.BackgroundColor3 = library.theme.accentcolor
+    watermark.topbar.BorderSizePixel = 0
+    watermark.topbar.Visible = watermark.Visible
+    watermark.topbar.Size = UDim2.new(0, 0, 0, 1)
+
+    watermark.mainbar.Size = UDim2.new(0, watermark.label.TextBounds.X, 0, 25)
+    watermark.topbar.Size = UDim2.new(0, watermark.label.TextBounds.X+6, 0, 1)
+    watermark.Outline.Size = watermark.mainbar.Size + UDim2.fromOffset(2, 2)
+    watermark.BlackOutline.Size = watermark.mainbar.Size + UDim2.fromOffset(4, 4)
+
+    watermark.mainbar.Size = UDim2.new(0, watermark.label.TextBounds.X+4, 0, 25)    
+    watermark.label.Size = UDim2.new(0, watermark.label.TextBounds.X+4, 0, 25)
+    watermark.topbar.Size = UDim2.new(0, watermark.label.TextBounds.X+6, 0, 1)
+    watermark.Outline.Size = watermark.mainbar.Size + UDim2.fromOffset(2, 2)
+    watermark.BlackOutline.Size = watermark.mainbar.Size + UDim2.fromOffset(4, 4)
+
+    local startTime, counter, oldfps = os.clock(), 0, nil
+    runservice.Heartbeat:Connect(function()
+        watermark.label.Visible = watermark.Visible
+        watermark.mainbar.Visible = watermark.Visible
+        watermark.topbar.Visible = watermark.Visible
+        watermark.Outline.Visible = watermark.Visible
+        watermark.BlackOutline.Visible = watermark.Visible
+
+        if not name:find("{fps}") then
+            watermark.label.Text = " " .. name:gsub("{game}", gamename):gsub("{fps}", "0 FPS") .. " "
+        end
+
+        if name:find("{fps}") then
+            local currentTime = os.clock()
+            counter = counter + 1
+            if currentTime - startTime >= 1 then 
+                local fps = math.floor(counter / (currentTime - startTime))
+                counter = 0
+                startTime = currentTime
+
+                if fps ~= oldfps then
+                    watermark.label.Text = " " .. name:gsub("{game}", gamename):gsub("{fps}", fps .. " FPS") .. " "
+        
+                    watermark.label.Size = UDim2.new(0, watermark.label.TextBounds.X+10, 0, 25)
+                    watermark.mainbar.Size = UDim2.new(0, watermark.label.TextBounds.X, 0, 25)
+                    watermark.topbar.Size = UDim2.new(0, watermark.label.TextBounds.X, 0, 1)
+
+                    watermark.Outline.Size = watermark.mainbar.Size + UDim2.fromOffset(2, 2)
+                    watermark.BlackOutline.Size = watermark.mainbar.Size + UDim2.fromOffset(4, 4)
+                end
+                oldfps = fps
             end
         end
     end)
- 
- 
- 
-    function getClosestPlayerToCursor()
-        local closestPlayer
-        local shortestDistance = Settings.rewrittenmain.FOV
- 
-        for i, v in pairs(game.Players:GetPlayers()) do
-            if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Humanoid") and v.Character.Humanoid.Health ~= 0 and v.Character:FindFirstChild("HumanoidRootPart") then
-                local pos = CC:WorldToViewportPoint(v.Character.PrimaryPart.Position)
-                local magnitude = (Vector2.new(pos.X, pos.Y) - Vector2.new(mouse.X, mouse.Y)).magnitude
-                if magnitude < shortestDistance then
-                    closestPlayer = v
-                    shortestDistance = magnitude
-                end
-            end
-        end
-        return closestPlayer
-    end
- 
-    local pingvalue = nil;
-    local split = nil;
-    local ping = nil;
- 
-    game:GetService"RunService".Stepped:connect(function()
-        if enabled and Plr.Character ~= nil and Plr.Character:FindFirstChild("HumanoidRootPart") then
-            placemarker.CFrame = CFrame.new(Plr.Character.HumanoidRootPart.Position+(Plr.Character.HumanoidRootPart.Velocity*accomidationfactor))
-        else
-            placemarker.CFrame = CFrame.new(0, 9999, 0)
-        end
-        if Settings.rewrittenmain.AUTOPRED == true then
-             pingvalue = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
-             split = string.split(pingvalue,'(')
-             ping = tonumber(split[1])
-            if ping < 130 then
-                PredictionValue = 0.151
-            elseif ping < 125 then
-                PredictionValue = 0.149
-            elseif ping < 110 then
-                PredictionValue = 0.146
-            elseif ping < 105 then
-                PredictionValue = 0.138
-            elseif ping < 90 then
-                PredictionValue = 0.136
-            elseif ping < 80 then
-                PredictionValue = 0.134
-            elseif ping < 70 then
-                PredictionValue = 0.131
-            elseif ping < 60 then
-                PredictionValue = 0.1229
-            elseif ping < 50 then
-                PredictionValue = 0.1225
-            elseif ping < 40 then
-                PredictionValue = 0.1256
-            end
-        end
-    end)
- 
-    local mt = getrawmetatable(game)
-    local old = mt.__namecall
-    setreadonly(mt, false)
-    mt.__namecall = newcclosure(function(...)
-        local args = {...}
-        if enabled and getnamecallmethod() == "FireServer" and args[2] == "UpdateMousePos" and Settings.rewrittenmain.Enabled and Plr.Character ~= nil then
- 
-            -- args[3] = Plr.Character.HumanoidRootPart.Position+(Plr.Character.HumanoidRootPart.Velocity*accomidationfactor)
-            --[[
-            if Settings.rewrittenmain.AIRSHOT == true then
-                if game.Workspace.Players[Plr.Name].Humanoid:GetState() == Enum.HumanoidStateType.Freefall then -- Plr.Character:WaitForChild("Humanoid"):GetState() == Enum.HumanoidStateType.Freefall
- 
-                    --// Airshot
-                    args[3] = Plr.Character.LeftFoot.Position+(Plr.Character.LeftFoot.Velocity*PredictionValue)
-                else
-                    args[3] = Plr.Character.HumanoidRootPart.Position+(Plr.Character.HumanoidRootPart.Velocity*PredictionValue)
-                end
-            else
-                    args[3] = Plr.Character.HumanoidRootPart.Position+(Plr.Character.HumanoidRootPart.Velocity*PredictionValue)
-            end
-            ]]
-            if Prediction == true then
- 
-            args[3] = Plr.Character[SelectedPart].Position+(Plr.Character[SelectedPart].Velocity*PredictionValue)
- 
-            else
- 
-            args[3] = Plr.Character[SelectedPart].Position
- 
-            end
- 
-            return old(unpack(args))
-        end
-        return old(...)
-    end)
- 
-    game:GetService("RunService").RenderStepped:Connect(function()
-        if Settings.rewrittenmain.RESOVLER == true and Plr.Character ~= nil and enabled and Settings.rewrittenmain.Enabled then
-        if Settings.rewrittenmain.AIRSHOT == true and enabled and Plr.Character ~= nil then
- 
-            if game.Workspace.Players[Plr.Name].Humanoid:GetState() == Enum.HumanoidStateType.Freefall then -- Plr.Character:WaitForChild("Humanoid"):GetState() == Enum.HumanoidStateType.Freefall
- 
-                --// Airshot
- 
-                --// Anchor Check
- 
-                if Plr.Character ~= nil and Plr.Character.HumanoidRootPart.Anchored == true then
-                    AnchorCount = AnchorCount + 1
-                    if AnchorCount >= MaxAnchor then
-                        Prediction = false
-                        wait(2)
-                        AnchorCount = 0;
-                    end
-                else
-                    Prediction = true
-                    AnchorCount = 0;
-                end
- 
-                SelectedPart = "HumanoidRootPart"
- 
-            else
-                --// Anchor Check
- 
-                if Plr.Character ~= nil and Plr.Character.HumanoidRootPart.Anchored == true then
-                    AnchorCount = AnchorCount + 1
-                    if AnchorCount >= MaxAnchor then
-                        Prediction = false
-                        wait(2)
-                        AnchorCount = 0;
-                    end
-                else
-                    Prediction = true
-                    AnchorCount = 0;
-                end
- 
-                SelectedPart = "HumanoidRootPart"
- 
-            end
-            else
- 
-                --// Anchor Check
- 
-                if Plr.Character ~= nil and Plr.Character.HumanoidRootPart.Anchored == true then
-                    AnchorCount = AnchorCount + 1
-                    if AnchorCount >= MaxAnchor then
-                        Prediction = false
-                        wait(2)
-                        AnchorCount = 0;
-                    end
-                else
-                    Prediction = true
-                    AnchorCount = 0;
-                end
- 
-                SelectedPart = "HumanoidRootPart"
-            end
- 
-        else
-                SelectedPart = "HumanoidRootPart"
-        end
+
+    watermark.mainbar.MouseEnter:Connect(function()
+        tweenservice:Create(watermark.mainbar, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), { BackgroundTransparency = 1, Active = false }):Play()
+        tweenservice:Create(watermark.topbar, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), { BackgroundTransparency = 1, Active = false }):Play()
+        tweenservice:Create(watermark.label, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), { TextTransparency = 1, Active = false }):Play()
+        tweenservice:Create(watermark.Outline, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), { BackgroundTransparency = 1, Active = false }):Play()
+        tweenservice:Create(watermark.BlackOutline, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), { BackgroundTransparency = 1, Active = false }):Play()
     end)
     
-    game:GetService("RunService").Stepped:connect(
-    function()
-if Settings.rewrittenmain.TargetStrafe == true and enabled then
-            local lp = game.Players.LocalPlayer.Character
+    watermark.mainbar.MouseLeave:Connect(function()
+        tweenservice:Create(watermark.mainbar, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), { BackgroundTransparency = 0, Active = true }):Play()
+        tweenservice:Create(watermark.topbar, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), { BackgroundTransparency = 0, Active = true }):Play()
+        tweenservice:Create(watermark.label, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), { TextTransparency = 0, Active = true }):Play()
+        tweenservice:Create(watermark.Outline, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), { BackgroundTransparency = 0, Active = true }):Play()
+        tweenservice:Create(watermark.BlackOutline, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), { BackgroundTransparency = 0, Active = true }):Play()
+    end)
 
-            local targpos = Plr.Character.HumanoidRootPart.Position
+    function watermark:UpdateTheme(theme)
+        theme = theme or library.theme
+        watermark.Outline.BackgroundColor3 = theme.outlinecolor
+        watermark.BlackOutline.BackgroundColor3 = theme.outlinecolor2
+        watermark.label.Font = theme.font
+        watermark.topbar.BackgroundColor3 = theme.accentcolor
+    end
 
-            lp:SetPrimaryPartCFrame(
-                CFrame.new(
-                    targpos +
-                        Vector3.new(
-                            math.cos(tick() * Settings.rewrittenmain.StrafeSpeed) * Settings.rewrittenmain.StrafeRadius,
-                            Settings.rewrittenmain.StrafeHeight,
-                            math.sin(tick() * Settings.rewrittenmain.StrafeSpeed) * Settings.rewrittenmain.StrafeRadius
-                        )
-                )
-            )
+    return watermark
+end
 
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
-                CFrame.new(
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Position,
-                Vector3.new(targpos.X, game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Position.Y, targpos.Z)
-            )
+function library:CreateWindow(name, size, hidebutton)
+    local window = { }
 
-            game:GetService("Players").LocalPlayer.Character.Humanoid.AutoRotate = false
-        else
-            game:GetService("Players").LocalPlayer.Character.Humanoid.AutoRotate = true
+    window.name = name or ""
+    window.size = UDim2.fromOffset(size.X, size.Y) or UDim2.fromOffset(492, 598)
+    window.hidebutton = hidebutton or Enum.KeyCode.RightShift
+    window.theme = library.theme
+
+    local updateevent = Instance.new("BindableEvent")
+    function window:UpdateTheme(theme)
+        updateevent:Fire(theme or library.theme)
+        window.theme = (theme or library.theme)
+    end
+
+    window.Main = Instance.new("ScreenGui", coregui)
+    window.Main.Name = name
+    window.Main.DisplayOrder = 15
+    if syn then
+        syn.protect_gui(window.Main)
+    end
+
+    if getgenv().uilib then
+        getgenv().uilib:Remove()
+    end
+    getgenv().uilib = window.Main
+
+    local dragging, dragInput, dragStart, startPos
+    uis.InputChanged:Connect(function(input)
+        if input == dragInput and dragging then
+            local delta = input.Position - dragStart
+            window.Frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+        end
+    end)
+
+    local dragstart = function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+            dragging = true
+            dragStart = input.Position
+            startPos = window.Frame.Position
+            
+            input.Changed:Connect(function()
+                if input.UserInputState == Enum.UserInputState.End then
+                    dragging = false
+                end
+            end)
         end
     end
-)
- 
---the TargetLock
- 
-getgenv().Prediction = 0.143105125985120958176	
-getgenv().AimPart = "UpperTorso"	
-getgenv().Key = "Q"	
-getgenv().DisableKey = "P"	
- 
-getgenv().FOV = true	
-getgenv().ShowFOV = false	
-getgenv().FOVSize = 55	
- 
---// Variables (Service)	
- 
-local Players = game:GetService("Players")	
-local RS = game:GetService("RunService")	
-local WS = game:GetService("Workspace")	
-local GS = game:GetService("GuiService")	
-local SG = game:GetService("StarterGui")	
- 
---// Variables (regular)	
- 
-local LP = Players.LocalPlayer	
-local Mouse = LP:GetMouse()	
-local Camera = WS.CurrentCamera	
-local GetGuiInset = GS.GetGuiInset	
- 
-local AimlockState = true	
-local Locked	
-local Victim	
- 
-local SelectedKey = getgenv().Key	
-local SelectedDisableKey = getgenv().DisableKey	
- 
---// Check if aimlock is loaded	
- 
-if getgenv().Loaded == true then	
-    Notify("Aimlock is already loaded!")	
-    return	
-end	
- 
-getgenv().Loaded = true	
- 
---// FOV Circle	
- 
-local fov = Drawing.new("Circle")	
-fov.Filled = false
+
+    local dragend = function(input)
+        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+            dragInput = input
+        end
+    end
+
+    window.Frame = Instance.new("TextButton", window.Main)
+    window.Frame.Name = "main"
+    window.Frame.Position = UDim2.fromScale(0.5, 0.5)
+    window.Frame.BorderSizePixel = 0
+    window.Frame.Size = window.size
+    window.Frame.AutoButtonColor = false
+    window.Frame.Text = ""
+    window.Frame.BackgroundColor3 = window.theme.backgroundcolor
+    window.Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+    updateevent.Event:Connect(function(theme)
+        window.Frame.BackgroundColor3 = theme.backgroundcolor
+    end)
+
+    uis.InputBegan:Connect(function(key)
+        if key.KeyCode == window.hidebutton then
+            window.Frame.Visible = not window.Frame.Visible
+        end
+    end)
+
+    local function checkIfGuiInFront(Pos)
+        local objects = coregui:GetGuiObjectsAtPosition(Pos.X, Pos.Y)
+        for i,v in pairs(objects) do 
+            if not string.find(v:GetFullName(), window.name) then 
+                table.remove(objects, i)
+            end 
+        end
+        return (#objects ~= 0 and objects[1].AbsolutePosition ~= Pos)
+    end
+
+    window.BlackOutline = Instance.new("Frame", window.Frame)
+    window.BlackOutline.Name = "outline"
+    window.BlackOutline.ZIndex = 1
+    window.BlackOutline.Size = window.size + UDim2.fromOffset(2, 2)
+    window.BlackOutline.BorderSizePixel = 0
+    window.BlackOutline.BackgroundColor3 = window.theme.outlinecolor2
+    window.BlackOutline.Position = UDim2.fromOffset(-1, -1)
+    updateevent.Event:Connect(function(theme)
+        window.BlackOutline.BackgroundColor3 = theme.outlinecolor2
+    end)
+
+    window.Outline = Instance.new("Frame", window.Frame)
+    window.Outline.Name = "outline"
+    window.Outline.ZIndex = 0
+    window.Outline.Size = window.size + UDim2.fromOffset(4, 4)
+    window.Outline.BorderSizePixel = 0
+    window.Outline.BackgroundColor3 = window.theme.outlinecolor
+    window.Outline.Position = UDim2.fromOffset(-2, -2)
+    updateevent.Event:Connect(function(theme)
+        window.Outline.BackgroundColor3 = theme.outlinecolor
+    end)
+
+    window.BlackOutline2 = Instance.new("Frame", window.Frame)
+    window.BlackOutline2.Name = "outline"
+    window.BlackOutline2.ZIndex = -1
+    window.BlackOutline2.Size = window.size + UDim2.fromOffset(6, 6)
+    window.BlackOutline2.BorderSizePixel = 0
+    window.BlackOutline2.BackgroundColor3 = window.theme.outlinecolor2
+    window.BlackOutline2.Position = UDim2.fromOffset(-3, -3)
+    updateevent.Event:Connect(function(theme)
+        window.BlackOutline2.BackgroundColor3 = theme.outlinecolor2
+    end)
+
+    window.TopBar = Instance.new("Frame", window.Frame)
+    window.TopBar.Name = "top"
+    window.TopBar.Size = UDim2.fromOffset(window.size.X.Offset, window.theme.topheight)
+    window.TopBar.BorderSizePixel = 0
+    window.TopBar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    window.TopBar.InputBegan:Connect(dragstart)
+    window.TopBar.InputChanged:Connect(dragend)
+    updateevent.Event:Connect(function(theme)
+        window.TopBar.Size = UDim2.fromOffset(window.size.X.Offset, theme.topheight)
+    end)
+
+    window.TopGradient = Instance.new("UIGradient", window.TopBar)
+    window.TopGradient.Rotation = 90
+    window.TopGradient.Color = ColorSequence.new({ ColorSequenceKeypoint.new(0.00, window.theme.topcolor), ColorSequenceKeypoint.new(1.00, window.theme.topcolor2) })
+    updateevent.Event:Connect(function(theme)
+        window.TopGradient.Color = ColorSequence.new({ ColorSequenceKeypoint.new(0.00, theme.topcolor), ColorSequenceKeypoint.new(1.00, theme.topcolor2) })
+    end)
+
+    window.NameLabel = Instance.new("TextLabel", window.TopBar)
+    window.NameLabel.TextColor3 = window.theme.toptextcolor
+    window.NameLabel.Text = window.name
+    window.NameLabel.TextXAlignment = Enum.TextXAlignment.Left
+    window.NameLabel.Font = window.theme.font
+    window.NameLabel.Name = "title"
+    window.NameLabel.Position = UDim2.fromOffset(4, -2)
+    window.NameLabel.BackgroundTransparency = 1
+    window.NameLabel.Size = UDim2.fromOffset(190, window.TopBar.AbsoluteSize.Y / 2 - 2)
+    window.NameLabel.TextSize = window.theme.titlesize
+    updateevent.Event:Connect(function(theme)
+        window.NameLabel.TextColor3 = theme.toptextcolor
+        window.NameLabel.Font = theme.font
+        window.NameLabel.TextSize = theme.titlesize
+    end)
+
+    window.Line2 = Instance.new("Frame", window.TopBar)
+    window.Line2.Name = "line"
+    window.Line2.Position = UDim2.fromOffset(0, window.TopBar.AbsoluteSize.Y / 2.1)
+    window.Line2.Size = UDim2.fromOffset(window.size.X.Offset, 1)
+    window.Line2.BorderSizePixel = 0
+    window.Line2.BackgroundColor3 = window.theme.accentcolor
+    updateevent.Event:Connect(function(theme)
+        window.Line2.BackgroundColor3 = theme.accentcolor
+    end)
+
+    window.TabList = Instance.new("Frame", window.TopBar)
+    window.TabList.Name = "tablist"
+    window.TabList.BackgroundTransparency = 1
+    window.TabList.Position = UDim2.fromOffset(0, window.TopBar.AbsoluteSize.Y / 2 + 1)
+    window.TabList.Size = UDim2.fromOffset(window.size.X.Offset, window.TopBar.AbsoluteSize.Y / 2)
+    window.TabList.BorderSizePixel = 0
+    window.TabList.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+
+    window.TabList.InputBegan:Connect(dragstart)
+    window.TabList.InputChanged:Connect(dragend)
+
+    window.BlackLine = Instance.new("Frame", window.Frame)
+    window.BlackLine.Name = "blackline"
+    window.BlackLine.Size = UDim2.fromOffset(window.size.X.Offset, 1)
+    window.BlackLine.BorderSizePixel = 0
+    window.BlackLine.ZIndex = 9
+    window.BlackLine.BackgroundColor3 = window.theme.outlinecolor2
+    window.BlackLine.Position = UDim2.fromOffset(0, window.TopBar.AbsoluteSize.Y)
+    updateevent.Event:Connect(function(theme)
+        window.BlackLine.BackgroundColor3 = theme.outlinecolor2
+    end)
+
+    window.BackgroundImage = Instance.new("ImageLabel", window.Frame)
+    window.BackgroundImage.Name = "background"
+    window.BackgroundImage.BorderSizePixel = 0
+    window.BackgroundImage.ScaleType = Enum.ScaleType.Tile
+    window.BackgroundImage.Position = window.BlackLine.Position + UDim2.fromOffset(0, 1)
+    window.BackgroundImage.Size = UDim2.fromOffset(window.size.X.Offset, window.size.Y.Offset - window.TopBar.AbsoluteSize.Y - 1)
+    window.BackgroundImage.Image = window.theme.background or ""
+    window.BackgroundImage.ImageTransparency = window.BackgroundImage.Image ~= "" and 0 or 1
+    window.BackgroundImage.ImageColor3 = Color3.new() 
+    window.BackgroundImage.BackgroundColor3 = window.theme.backgroundcolor
+    window.BackgroundImage.TileSize = UDim2.new(0, window.theme.tilesize, 0, window.theme.tilesize)
+    updateevent.Event:Connect(function(theme)
+        window.BackgroundImage.Image = theme.background or ""
+        window.BackgroundImage.ImageTransparency = 
