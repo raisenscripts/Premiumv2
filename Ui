@@ -32,6 +32,11 @@ end)
 local tab = DrRayLibrary.newTab("Mısc" , "ImageIdHere")
 
 
+tab.newButton("Zombie Animation", "get *Fe* zombie animation", function()
+    loadstring(game:Httpget("https://raw.githubusercontent.com/raisenscripts/Premiumv2/main/Zombie%20animation"))()
+end)
+
+
 tab.newToggle("Toggle", "Toggle! (prints the state)", true, function(toggleState)
     if toggleState then
         print("On")
