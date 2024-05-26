@@ -21,6 +21,17 @@ tab.newButton("Tp walk v4", "Recommended for silent aim.", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/TheRealXORA/Roblox-Scripts/main/Tpwalk%20V4%20%5B%20BETA%20%5D.lua", true))()
 end)
 
+
+local tab = DrRayLibrary.newTab("Other guis", "ImageIdHere")
+
+
+tab.newButton("Swagmode", "Swagmode v4", function()
+    loadstring(game:Httpget("https://raw.githubusercontent.com/lerkermer/lua-projects/master/SwagModeV002"))()
+end)
+
+local tab = DrRayLibrary.newTab("Mısc" , "ImageIdHere")
+
+
 tab.newToggle("Toggle", "Toggle! (prints the state)", true, function(toggleState)
     if toggleState then
         print("On")
