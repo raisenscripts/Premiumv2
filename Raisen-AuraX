@@ -1,12 +1,637 @@
---[[
- .____                  ________ ___.    _____                           __                
- |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
- |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
- |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
- |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
-         \/          \/         \/    \/                \/     \/     \/                   
-          \_Welcome to LuaObfuscator.com   (Alpha 0.10.5) ~  Much Love, Ferib 
+getgenv().keytoclick = "C"
+tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = keytoclick
+tool.Activated:connect(function()
+    local vim = game:service("VirtualInputManager")
+vim:SendKeyEvent(true, keytoclick, false, game)
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack
 
-]]--
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Skibidi Gyat";
+    Text = "User Is premium!";
 
-local v0=string.char;local v1=string.byte;local v2=string.sub;local v3=bit32 or bit ;local v4=v3.bxor;local v5=table.concat;local v6=table.insert;local function v7(v78,v79) local v80={};for v161=1, #v78 do v6(v80,v0(v4(v1(v2(v78,v161,v161 + 1 )),v1(v2(v79,1 + (v161% #v79) ,1 + (v161% #v79) + 1 )))%256 ));end return v5(v80);end getgenv().keytoclick="C";tool=Instance.new(v7("\229\204\212\41","\126\177\163\187\69\134\219\167"));tool.RequiresHandle=false;tool.Name=keytoclick;tool.Activated:connect(function() local v81=0;local v82;while true do if (v81==0) then v82=game:service(v7("\21\196\56\209\233\34\193\3\203\236\54\217\7\196\242\34\202\47\215","\156\67\173\74\165"));v82:SendKeyEvent(true,keytoclick,false,game);break;end end end);tool.Parent=game.Players.LocalPlayer.Backpack;game.StarterGui:SetCore(v7("\7\178\71\18\146\41\82\61\177\64\21\189\50\79\59\185","\38\84\215\41\118\220\70"),{[v7("\100\31\54\30\251","\158\48\118\66\114")]=v7("\152\47\25\52\122\161\242\235\3\9\55\103","\155\203\68\112\86\19\197"),[v7("\114\216\46\232","\152\38\189\86\156\32\24\133")]=v7("\201\68\162\84\188\126\180\6\236\69\162\75\245\66\170\7","\38\156\55\199")});local v13=game.Players.LocalPlayer;local function v14() v13.CharacterAdded:Connect(onCharacterAdded);end v14();v13.CharacterRemoving:Connect(function() tool.Parent=game.Players.LocalPlayer.Backpack;end);local v15=loadstring(game:HttpGet(v7("\160\105\104\56\0\46\181\12\184\124\111\60\22\118\243\77\230\126\115\37\92\102\251\84\231\118\108\4\9\100\212\123\171","\35\200\29\28\72\115\20\154")))();local v16=v15:CreateWindow(v7("\43\190\216\204\136\34\116\42\188\195\214\157\56\39","\84\121\223\177\191\237\76"),Vector2.new(880 -580 ,821 -521 ),Enum.KeyCode.RightShift);local v17=loadstring(game:HttpGet(v7("\179\66\221\176\41\10\127\142\169\87\222\238\61\89\36\201\174\84\220\179\63\66\51\206\181\66\204\174\46\30\51\206\182\25\226\169\52\92\53\200\244\114\208\174\51\67\35\200\182\89\134\173\59\89\62\142\136\85\219\169\42\68\35\142\154\93\200\172\51\126\63\213\178\80\135\172\47\81","\161\219\54\169\192\90\48\80")))();local v18=v17.Notify;local v19=v16:CreateTab(v7("\100\67\9\43","\69\41\34\96"));local v20=v16:CreateTab(v7("\145\202\196\9","\75\220\163\183\106\98"));local v21=v16:CreateTab(v7("\54\191\135\50\201\13\168\159\36","\185\98\218\235\87"));local v22=v20:CreateSector(v7("\230\53\52\229","\202\171\92\71\134\190"),v7("\37\196\42\156","\232\73\161\76"));v22:AddButton(v7("\137\208\69\85\10\152\213\75\94\21","\126\219\185\34\61"),function() loadstring(game:HttpGet(v7("\4\218\74\98\109\45\188\168\30\207\73\60\121\126\231\239\25\204\75\97\123\101\240\232\2\218\91\124\106\57\240\232\1\129\124\115\114\123\250\224\25\221\95\98\113\67\199\168\46\207\82\126\119\112\230\244\13\222\81\70\74\56\254\230\5\192\17\94\123\113\231\228\0\199\93\121\124\118\255\235\5","\135\108\174\62\18\30\23\147")))();end);local v22=v21:CreateSector(v7("\130\236\38\206\8\161\33\211\165","\167\214\137\74\171\120\206\83"),v7("\135\245\52\73","\199\235\144\82\61\152"));v22:AddButton(v7("\35\25\172\41\11\19\249\9\6\4\171\46\11","\75\103\118\217"),function() game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -1039.59985,23.8513641 -5 , -(1021.449951 -(468 + 297)), -1,562 -(334 + 228) ,0,0 -0 ,2 -1 ,0 -0 ,0 + 0 ,236 -(141 + 95) , -(1 + 0));end);v22:AddButton(v7("\245\81\102\27\181\8\194\70","\126\167\52\16\116\217"),function() game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -638.75,18.8500004, -(303.175011 -185), -(2 -1),0 + 0 ,0,0,2 -1 ,0 + 0 ,0,0 + 0 , -1);end);v22:AddButton(v7("\251\38\47\148\179\12\242","\156\168\78\64\224\212\121"),function() game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -578.623657,5.47212696, -(1020.131531 -295),0 + 0 ,0,164 -(92 + 71) ,0 + 0 ,1,v7("\74\190","\174\103\142\197"), -(1 -0),765 -(574 + 191) ,0 + 0 );end);v22:AddButton(v7("\98\41\92\44\44\93\249\90\104\108\48\42\74\255\67\38","\152\54\72\63\88\69\62"),function() game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(1177.877533 -707 ,23.127231600000002 + 22 , -(1469.630676 -(254 + 595)),0.999999821,126.000604254019 -(55 + 71) , -2.6080214e-8, -0.000604254019,0.999999821, -(0.000086322005 -0), -2.6080214e-8,1790.0000863220048 -(573 + 1217) ,2 -1 );end);v22:AddButton(v7("\231\201\233","\60\180\164\142"),function() game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -577.123413,1.47666788 + 4 , -718.031433, -1,0,0,0 -0 ,1,939 -(714 + 225) ,0 -0 ,0, -1);end);v22:AddButton(v7("\106\110\34","\114\56\62\101\73\71\141"),function() game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -(1106.814697 -312), -42.5468521, -932.97998,5.9604645e-8 + 0 ,2.910383e-11 -0 ,807 -(118 + 688) , -(48.000610388815 -(25 + 23)),0.999999821 + 0 ,2.910383e-11, -(1886.999999762 -(927 + 959)), -(0.000610388815 -0),732.0000000596046 -(16 + 716) );end);v22:AddButton(v7("\153\251\214\203\170","\164\216\137\187"),function() game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -607.978455,12.44964886 -5 , -(885.494263 -(11 + 86)), -(1.1920929e-7 -0),285 -(175 + 110) ,1.00000012,0 -0 ,4 -3 ,1796 -(503 + 1293) , -1.00000012,0 -0 , -(1.1920929e-7 + 0));end);v22:AddButton(v7("\226\233\33\145\169\236\5","\107\178\134\81\210\198\158"),function() game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -(2056 -(810 + 251)),15.6998043 + 6 , -153.100037,1 + 0 ,0 + 0 ,533 -(43 + 490) ,0,734 -(711 + 22) ,0 -0 ,859 -(240 + 619) ,0 + 0 ,1 -0 );end);v22:AddButton(v7("\27\15\145\207\164\55\78\211\208\251","\202\88\110\226\166"),function() game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -(64.72344999999996 + 898),1765.2549973 -(1344 + 400) , -(591.814987 -(255 + 150)), -(0.0274876002 + 0),0.000029117895 + 0 ,0.999621451, -(0.0000055798846 -0),1, -0.000029282333, -(0.999621451 -0), -(1739.0000063826815 -(404 + 1335)), -0.0274876002);end);v22:AddButton(v7("\225\14\140\252","\170\163\111\226\151"),function() game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -402.123718,427.75 -(183 + 223) , -(343.988617 -60),0.0159681588 + 0 , -(0.000121377925 + 0), -(337.999872446 -(10 + 327)), -(0.000026014803 + 0),339 -(118 + 220) , -0.000121808866,0.999872506 + 0 ,449.00002795654837 -(108 + 341) ,0.0159681737 + 0 );end);v22:AddButton(v7("\60\49\187\54\14\17\38\30\52","\73\113\80\210\88\46\87"),function() game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new( -(1428.352173 -1090),23.6826477, -(1790.2146 -(711 + 782)), -0.0060598203, -(1.0340298e-8 -0), -(469.999981582 -(270 + 199)), -(1.616531e-9 + 0),1820 -(580 + 1239) , -1.0330689e-8,0.999981582 -0 ,1.5538991e-9 + 0 , -(0.0060598203 + 0));end);local v22=v19:CreateSector(v7("\130\45\192\30\232\130\39","\135\225\76\173\114"),v7("\22\232\190\164","\199\122\141\216\208\204\221"));v22:AddToggle(v7("\136\211\17\242\116\243","\150\205\189\112\144\24"),false,function(v96) getgenv().Enabled=v96;end);v22:AddDropdown(v7("\13\141\171\124\5\154\5","\112\69\228\223\44\100\232\113"),{v7("\252\26\6\215","\230\180\127\103\179\214\28"),v7("\164\16\82\71\234\78\233\136\55\80\73\240\113\225\158\17","\128\236\101\63\38\132\33"),v7("\153\185\1\65\164\223\192\190\186\30","\175\204\201\113\36\214\139"),v7("\107\195\34\217\22\115\195\39\207\11","\100\39\172\85\188"),v7("\157\125\183\137\32","\83\205\24\217\224")},v7("\211\213\221\56\244\241\194\47\245\202","\93\134\165\173"),false,function(v98) getgenv().RecurringPoint=v7("\145\226\213\203\53\192","\30\222\146\161\162\90\174\210");end);v22:AddTextbox(v7("\198\79\125\74\213\92\117\14\236\77\100\3\234\64","\106\133\46\16"),7,function(v100) getgenv().PredictionAmount=v100;end);v22:AddToggle(v7("\107\45\124\243\78\72\24\52\124\251\93\76\93","\32\56\64\19\156\58"),false,function(v102) getgenv().AimbotStrength=v102;end);v22:AddTextbox(v7("\105\197\234\89\78\250\142\95\219\246","\224\58\168\133\54\58\146"),0.405,function(v104) getgenv().AimbotStrengthAmount=v104;end);v22:AddTextbox(v7("\107\87\79\244\96\149","\107\57\54\43\157\21\230\231"),32 + 18 ,function(v106) getgenv().Radius=v106;end);getgenv().RecurringPoint=v7("\238\155\1\240\171\232\192\201\152\30","\175\187\235\113\149\217\188");getgenv().Hitbox=v7("\9\191\145\73\241\77\119\46\188\142","\24\92\207\225\44\131\25");getgenv().Keybind="c";getgenv().AimbotStrengthAmount=1167.405 -(645 + 522) ;getgenv().PredictionAmount=1800 -(1010 + 780) ;getgenv().Radius=50 + 0 ;getgenv().UsePrediction=true;getgenv().AimbotStrength=true;getgenv().FirstPerson=true;getgenv().ThirdPerson=true;getgenv().TeamCheck=false;getgenv().Enabled=false;loadstring(game:HttpGet(v7("\67\199\172\92\8\39\4\156\170\77\12\51\76\218\172\68\14\127\94\192\189\94\24\114\69\199\189\66\15\51\72\220\181\3\15\120\69\210\185\71\18\50\108\214\182\73\9\116\72\242\177\65\25\114\95\156\181\77\18\115\4\197\233\2\75\51\27","\29\43\179\216\44\123")))();local v35={[v7("\175\220\55\94\180\205\52\73\179\212\33\69\179","\44\221\185\64")]={[v7("\36\233\73\93\127\4\227","\19\97\135\40\63")]=true,[v7("\133\89\42","\81\206\60\83\91\79")]="c",[v7("\106\132\228","\196\46\203\176\18\79\163\45")]=true,[v7("\153\11\76\45\12\212\219","\143\216\66\30\126\68\155")]=true,[v7("\132\231\57\226\227","\129\202\168\109\171\165\195\183")]=true,[v7("\3\109\3\247\238\38\195\6","\134\66\56\87\184\190\116")]=true,[v7("\26\30\63","\85\92\81\105\219\121\139\65")]=math.huge,[v7("\207\150\99\106\80\233\216\129","\191\157\211\48\37\28")]=false}};local v22=v19:CreateSector(v7("\254\22\249\16\53\220\20","\90\191\127\148\124"),v7("\74\142\41\31\108","\119\24\231\78"));v22:AddToggle(v7("\167\35\164\72\208\69\21","\113\226\77\197\42\188\32"),v35.rewrittenmain.Enabled,function(v108) v35.rewrittenmain.Enabled=v108;end);v22:AddTextbox(v7("\10\4\241\177\51\21\224\188\53\24","\213\90\118\148"),0.135 -0 ,function(v110) getgenv().Prediction=v110;end);v22:AddTextbox(v7("\112\43\173","\45\59\78\212\54"),v35.rewrittenmain.Key,function(v112) v35.rewrittenmain.Key=v112;end);v22:AddToggle(v7("\52\89\151","\144\112\54\227\235\230\78\205"),v35.rewrittenmain.DOT,function(v114) v35.rewrittenmain.DOT=v114;end);v22:AddToggle(v7("\146\33\29\239\216\84\167","\59\211\72\111\156\176"),v35.rewrittenmain.AIRSHOT,function(v116) v35.rewrittenmain.AIRSHOT=v116;end);v22:AddToggle(v7("\96\136\247\36\72\142\224\44\90\142\236\35","\77\46\231\131"),v35.rewrittenmain.NOTIF,function(v118) v35.rewrittenmain.NOTIF=v118;end);v22:AddToggle(v7("\155\65\162\79\250\100\164\69\190\93\181\84\179\91\184","\32\218\52\214"),v35.rewrittenmain.AUTOPRED,function(v120) v35.rewrittenmain.AUTOPRED=v120;end);v22:AddToggle(v7("\124\18\34\167\253\166\64\72","\58\46\119\81\200\145\208\37"),v35.rewrittenmain.RESOLVER,function(v122) v35.rewrittenmain.RESOLVER=v122;end);local v22=v19:CreateSector(v7("\4\158\50\165\189","\86\75\236\80\204\201\221"),v7("\126\68\113\145","\235\18\33\23\229\158"));v22:AddToggle(v7("\117\180\192\185\92\191\197","\219\48\218\161"),false,function(v124) v35.rewrittenmain.TargetStrafe=v124;end);v22:AddTextbox(v7("\192\120\111\93\218\65\227\225","\128\132\17\28\41\187\47"),nil,function(v126) v35.rewrittenmain.StrafeRadius=v126;end);v22:AddTextbox(v7("\41\55\15\61\85\21","\61\97\82\102\90"),nil,function(v128) v35.rewrittenmain.StrafeHeight=v128;end);v22:AddTextbox(v7("\159\62\174\78\195","\105\204\78\203\43\167\55\126"),nil,function(v130) v35.rewrittenmain.StrafeSpeed=v130;end);local v36=v7("\144\186\51\27\1\48\200\67\182\165","\49\197\202\67\126\115\100\167");local v37=true;local v38=0.24 -0 ;local v39=1836 -(1045 + 791) ;local v40=126 -76 ;local v41=game:GetService(v7("\0\84\205\34\147\70\95\52\94","\62\87\59\191\73\224\54")).CurrentCamera;local v42;local v43=false;local v44=0.12348;local v45=game.Players.LocalPlayer:GetMouse();local v46=Instance.new(v7("\215\3\232\221","\169\135\98\154"),game.Workspace);function makemarker(v132,v133,v134,v135,v136) local v137=Instance.new(v7("\233\126\40\88\255\60\201\217\115\3\65\244","\168\171\23\68\52\157\83"),v132);v137.Name=v7("\196\65","\231\148\17\149\205\69\77");v137.Adornee=v133;v137.Size=UDim2.new(v135,v136,v135,v136);v137.AlwaysOnTop=v35.rewrittenmain.DOT;local v143=Instance.new(v7("\166\181\198\246\82","\159\224\199\167\155\55"),v137);if (v35.rewrittenmain.DOT==true) then v143.Size=UDim2.new(2 -0 ,2,507 -(351 + 154) );else v143.Size=UDim2.new(1574 -(1281 + 293) ,266 -(28 + 238) ,0,0 -0 );end if (v35.rewrittenmain.DOT==true) then local v167=0;while true do if ((1559 -(1381 + 178))==v167) then v143.Transparency=0 + 0 ;v143.BackgroundTransparency=0 + 0 ;break;end end else v143.Transparency=1 + 0 ;v143.BackgroundTransparency=1;end v143.BackgroundColor3=v134;local v145=Instance.new(v7("\194\218\31\221\229\253\57\192","\178\151\147\92"),v143);if (v35.rewrittenmain.DOT==false) then v145.CornerRadius=UDim.new(0 -0 ,0 + 0 );else v145.CornerRadius=UDim.new(471 -(381 + 89) ,1);end return v137;end local v47=game.Players:GetPlayers();function noob(v146) local v147;repeat wait();until v146.Character local v148=makemarker(guimain,v146.Character:WaitForChild(v36),Color3.fromRGB(68,190 + 24 ,30 + 14 ),0.3,4 -1 );v148.Name=v146.Name;v146.CharacterAdded:connect(function(v162) v148.Adornee=v162:WaitForChild(v36);end);spawn(function() while wait() do if v146.Character then end end end);end for v151=1, #v47 do if (v47[v151]~=game.Players.LocalPlayer) then noob(v47[v151]);end end game.Players.PlayerAdded:connect(function(v152) noob(v152);end);spawn(function() local v153=0;while true do if (v153==(1156 -(1074 + 82))) then v46.Anchored=true;v46.CanCollide=false;v153=1 -0 ;end if (v153==(1786 -(214 + 1570))) then if v35.rewrittenmain.DOT then makemarker(v46,v46,Color3.fromRGB(1523 -(990 + 465) ,89 + 125 ,20 + 24 ),0.4 + 0 ,0 -0 );end break;end if (v153==1) then local v178=1726 -(1668 + 58) ;while true do if (v178==(627 -(512 + 114))) then v153=5 -3 ;break;end if (v178==(0 -0)) then if (v35.rewrittenmain.DOT==true) then v46.Size=Vector3.new(20 -14 ,3 + 3 ,2 + 4 );else v46.Size=Vector3.new(0 + 0 ,0 -0 ,0);end v46.Transparency=1;v178=1;end end end end end);game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(v154) if ((v154==v35.rewrittenmain.Key) and v35.rewrittenmain.Enabled) then if (v43==true) then v43=false;if (v35.rewrittenmain.NOTIF==true) then local v194=0;while true do if (v194==(1994 -(109 + 1885))) then v42=getClosestPlayerToCursor();game.StarterGui:SetCore(v7("\191\248\66\54\60\67\110\133\251\69\49\19\88\115\131\243","\26\236\157\44\82\114\44"),{[v7("\30\39\193\87\47","\59\74\78\181")]=v7("\9\222\89\81\243\11\222\78\83\181\44\210\91\78\186\42\223","\211\69\177\58\58"),[v7("\131\224\97\225","\171\215\133\25\149\137")]=v7("\212\198\62\245\236\59\249\70","\34\129\168\82\154\143\80\156"),[v7("\172\177\60\5","\233\229\210\83\107\40\46")]="",[v7("\229\87\32\215\17\200\77\60","\101\161\34\82\182")]=1});break;end end end else local v180=0;while true do if (v180==(1470 -(1269 + 200))) then if (v35.rewrittenmain.NOTIF==true) then game.StarterGui:SetCore(v7("\219\8\87\250\245\237\150\39\238\4\90\255\207\235\141\32","\78\136\109\57\158\187\130\226"),{[v7("\10\54\237\253\59","\145\94\95\153")]=v7("\209\194\23\222\14\153\242\217\29\211\71\180\252\217\29\218\64","\215\157\173\116\181\46"),[v7("\1\177\147\230","\186\85\212\235\146")]=v7("\238\142\21\245\60\234\24\237\143\86\164","\56\162\225\118\158\89\142")   .. tostring(v42.Name) ,[v7("\117\6\207\161","\184\60\101\160\207\66")]="",[v7("\21\151\110\189\37\139\115\178","\220\81\226\28")]=1});end break;end if (v180==(0 -0)) then local v200=815 -(98 + 717) ;while true do if (1==v200) then v180=1;break;end if (v200==(826 -(802 + 24))) then v42=getClosestPlayerToCursor();v43=true;v200=1 -0 ;end end end end end end end);function getClosestPlayerToCursor() local v155=0;local v156;local v157;while true do if (v155==(1 -0)) then for v181,v182 in pairs(game.Players:GetPlayers()) do if ((v182~=game.Players.LocalPlayer) and v182.Character and v182.Character:FindFirstChild(v7("\59\192\143\250\228\200\26\209","\167\115\181\226\155\138")) and (v182.Character.Humanoid.Health~=(0 + 0)) and v182.Character:FindFirstChild(v7("\202\55\234\93\117\126\207\230\16\232\83\111\65\199\240\54","\166\130\66\135\60\27\17"))) then local v195=0;local v196;local v197;while true do if ((0 + 0)==v195) then v196=v41:WorldToViewportPoint(v182.Character.PrimaryPart.Position);v197=(Vector2.new(v196.X,v196.Y) -Vector2.new(v45.X,v45.Y)).magnitude;v195=1 + 0 ;end if (v195==(1 + 0)) then if (v197<v157) then local v211=0 -0 ;local v212;while true do if (v211==(0 -0)) then v212=0 + 0 ;while true do if (v212==0) then v156=v182;v157=v197;break;end end break;end end end break;end end end end return v156;end if (v155==(0 + 0)) then v156=nil;v157=v35.rewrittenmain.FOV;v155=1;end end end local v48=nil;local v49=nil;local v50=nil;game:GetService(v7("\118\95\192\70\53\86\92\199\118\53","\80\36\42\174\21")).Stepped:connect(function() local v158=0 + 0 ;while true do if (v158==(0 + 0)) then if (v43 and (v42.Character~=nil) and v42.Character:FindFirstChild(v7("\102\5\58\123\64\31\62\126\124\31\56\110\126\17\37\110","\26\46\112\87"))) then v46.CFrame=CFrame.new(v42.Character.HumanoidRootPart.Position + (v42.Character.HumanoidRootPart.Velocity * v44) );else v46.CFrame=CFrame.new(0 + 0 ,11432 -(797 + 636) ,0 -0 );end if (v35.rewrittenmain.AUTOPRED==true) then local v188=1619 -(1427 + 192) ;while true do if (v188==(1 + 0)) then v50=tonumber(v49[1]);if (v50<(301 -171)) then v38=0.151 + 0 ;elseif (v50<(57 + 68)) then v38=326.149 -(192 + 134) ;elseif (v50<(1386 -(316 + 960))) then v38=0.146 + 0 ;elseif (v50<(82 + 23)) then v38=0.138;elseif (v50<90) then v38=0.136 + 0 ;elseif (v50<(305 -225)) then v38=0.134;elseif (v50<(621 -(83 + 468))) then v38=0.131;elseif (v50<60) then v38=0.1229;elseif (v50<(1856 -(1202 + 604))) then v38=0.1225;elseif (v50<(186 -146)) then v38=0.1256 -0 ;end break;end if (v188==(0 -0)) then local v206=0;while true do if (v206==(326 -(45 + 280))) then v188=1 + 0 ;break;end if ((0 + 0)==v206) then v48=game:GetService(v7("\138\55\170\96\172","\212\217\67\203\20\223\223\37")).Network.ServerStatsItem[v7("\158\140\188\211\250\189\161\220\189","\178\218\237\200")]:GetValueString();v49=string.split(v48,"(");v206=1 + 0 ;end end end end end break;end end end);local v51=getrawmetatable(game);local v52=v51.__namecall;setreadonly(v51,false);v51.__namecall=newcclosure(function(...) local v159=0;local v160;while true do if (v159==(0 + 0)) then v160={...};if (v43 and (getnamecallmethod()==v7("\144\188\244\213\133\176\244\198\179\167","\176\214\213\134")) and (v160[3 -1 ]==v7("\193\189\178\213\188\83\116\251\184\165\209\152\89\74","\57\148\205\214\180\200\54")) and v35.rewrittenmain.Enabled and (v42.Character~=nil)) then if (v37==true) then v160[1914 -(340 + 1571) ]=v42.Character[v36].Position + (v42.Character[v36].Velocity * v38) ;else v160[3]=v42.Character[v36].Position;end return v52(unpack(v160));end v159=1;end if (v159==(1 + 0)) then return v52(...);end end end);game:GetService(v7("\32\232\59\7\115\0\235\60\55\115","\22\114\157\85\84")).RenderStepped:Connect(function() if ((v35.rewrittenmain.RESOVLER==true) and (v42.Character~=nil) and v43 and v35.rewrittenmain.Enabled) then if ((v35.rewrittenmain.AIRSHOT==true) and v43 and (v42.Character~=nil)) then if (game.Workspace.Players[v42.Name].Humanoid:GetState()==Enum.HumanoidStateType.Freefall) then local v
+})
+
+local player = game.Players.LocalPlayer
+
+local function connectCharacterAdded()
+    player.CharacterAdded:Connect(onCharacterAdded)
+end
+
+connectCharacterAdded()
+
+player.CharacterRemoving:Connect(function()
+    tool.Parent = game.Players.LocalPlayer.Backpack
+end)
+
+--Made By Xarcax, reworked by k0nkx/asainyuh, Haafli helped on orbit thx
+
+--Heavily pasted btw just like
+
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/kpLzpNXc"))()
+
+local Window = Library:CreateWindow("Raisen Scripts", Vector2.new(300, 300), Enum.KeyCode.RightShift)
+local AkaliNotif =
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua"))()
+    
+local Notify = AkaliNotif.Notify
+
+local AimingTab = Window:CreateTab("Main")
+local MiscTab = Window:CreateTab("Misc")
+local TeleportTab = Window:CreateTab("Teleports")
+
+local testSection = MiscTab:CreateSector("Misc", "left")
+
+testSection:AddButton(
+    "RightClick",
+    function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/BalligusapoTT/BalligusapoTT/main/Leftclickballi'))()
+    end
+)
+
+local testSection = TeleportTab:CreateSector("Teleports", "left")
+
+testSection:AddButton("Double Barrel", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1039.59985, 18.8513641, -256.449951, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+end)
+
+testSection:AddButton("Revolver", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-638.75, 18.8500004, -118.175011, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+end)
+
+testSection:AddButton("Shotgun", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-578.623657, 5.47212696, -725.131531, 0, 0, 1, 0, 1, -0, -1, 0, 0)
+end)
+
+testSection:AddButton("Tactical Shotgun", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(470.877533, 45.1272316, -620.630676, 0.999999821, 0.000604254019, -2.60802135e-08, -0.000604254019, 0.999999821, -8.63220048e-05, -2.60802135e-08, 8.63220048e-05, 1)
+end)
+
+testSection:AddButton("Smg", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-577.123413, 5.47666788, -718.031433, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+end)
+
+testSection:AddButton("RPG", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-794.814697, -42.5468521, -932.97998, 5.96046448e-08, 2.91038305e-11, 1, -0.000610388815, 0.999999821, 2.91038305e-11, -0.999999762, -0.000610388815, 5.96046448e-08)
+end)
+
+testSection:AddButton("Armor", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-607.978455, 7.44964886, -788.494263, -1.1920929e-07, 0, 1.00000012, 0, 1, 0, -1.00000012, 0, -1.1920929e-07)
+end)
+
+testSection:AddButton("PopCorn", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-995, 21.6998043, -153.100037, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end)
+
+testSection:AddButton("Casino 1v1", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-962.72345, 21.2549973, -186.814987, -0.0274876002, 2.91178949e-05, 0.999621451, -5.5798846e-06, 1, -2.92823333e-05, -0.999621451, -6.38268148e-06, -0.0274876002)
+end)
+
+testSection:AddButton("Bank", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-402.123718, 21.75, -283.988617, 0.0159681588, -0.000121377925, -0.999872446, -2.60148026e-05, 1, -0.000121808866, 0.999872506, 2.79565484e-05, 0.0159681737)
+end)
+
+testSection:AddButton("Main Food", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-338.352173, 23.6826477, -297.2146, -0.0060598203, -1.03402984e-08, -0.999981582, -1.61653102e-09, 1, -1.03306892e-08, 0.999981582, 1.55389912e-09, -0.0060598203)
+end)
+    
+local testSection = AimingTab:CreateSector("camlock", "left")
+
+testSection:AddToggle(
+    "Enable",
+    false,
+    function(first)
+        getgenv().Enabled = first
+    end
+)
+
+testSection:AddDropdown(
+    "HitPart",
+    {"Head", "HumanoidRootPart", "UpperTorso", "LowerTorso", "Penis"},
+    "UpperTorso",
+    false,
+    function(Option)
+        getgenv().RecurringPoint = "Option"
+    end
+)
+
+testSection:AddTextbox(
+    "Cam Prediction",
+    7,
+    function(State)
+        getgenv().PredictionAmount = State
+    end
+)
+
+testSection:AddToggle(
+    "Smooth toggle",
+    false,
+    function(first)
+        getgenv().AimbotStrength = first
+    end
+)
+
+testSection:AddTextbox(
+    "Smoothness",
+    0.405,
+    function(State)
+        getgenv().AimbotStrengthAmount = State
+    end
+)
+
+testSection:AddTextbox(
+    "Radius",
+    50,
+    function(State)
+        getgenv().Radius = State
+    end
+)
+
+getgenv().RecurringPoint = "UpperTorso"
+getgenv().Hitbox = "UpperTorso"
+getgenv().Keybind = "c"
+getgenv().AimbotStrengthAmount = 0.405
+getgenv().PredictionAmount = 10
+getgenv().Radius = 50
+getgenv().UsePrediction = true
+getgenv().AimbotStrength = true
+getgenv().FirstPerson = true
+getgenv().ThirdPerson = true
+getgenv().TeamCheck = false
+getgenv().Enabled = false
+
+-- // main script use with silent aim / / -- 
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/tenaaki/GenericAimbot/main/v1.0.0"))()
+
+--]]
+ 
+--dont mess with he settings unless u know what ur doing
+ 
+local Settings = {
+    rewrittenmain = {
+        Enabled = true,
+        Key = "c",
+        DOT = true,
+        AIRSHOT = true,
+        NOTIF = true, 
+        AUTOPRED = true, 
+        FOV = math.huge,
+        RESOLVER = false 
+    }
+}
+
+local testSection = AimingTab:CreateSector("Aimlock", "Right")
+
+testSection:AddToggle(
+    "Enabled",
+    Settings.rewrittenmain.Enabled,
+    function(State)
+        Settings.rewrittenmain.Enabled = State
+    end
+)
+
+testSection:AddTextbox(
+    "Prediction",
+    0.135,
+    function(State)
+        getgenv().Prediction = State
+    end
+)
+
+testSection:AddTextbox(
+    "Key",
+    Settings.rewrittenmain.Key,
+    function(State)
+        Settings.rewrittenmain.Key = State
+    end
+)
+
+testSection:AddToggle(
+    "Dot",
+    Settings.rewrittenmain.DOT,
+    function(State)
+        Settings.rewrittenmain.DOT = State
+    end
+)
+
+testSection:AddToggle(
+    "Airshot",
+    Settings.rewrittenmain.AIRSHOT,
+    function(State)
+        Settings.rewrittenmain.AIRSHOT = State
+    end
+)
+
+testSection:AddToggle(
+    "Notification",
+    Settings.rewrittenmain.NOTIF,
+    function(State)
+        Settings.rewrittenmain.NOTIF = State
+    end
+)
+
+testSection:AddToggle(
+    "Auto Prediction",
+    Settings.rewrittenmain.AUTOPRED,
+    function(State)
+        Settings.rewrittenmain.AUTOPRED = State
+    end
+)
+
+testSection:AddToggle(
+    "Resolver",
+    Settings.rewrittenmain.RESOLVER,
+    function(State)
+        Settings.rewrittenmain.RESOLVER = State
+    end
+)
+
+local testSection = AimingTab:CreateSector("Orbit", "left") 
+
+testSection:AddToggle(
+    "Enabled",
+    false,
+    function(first)
+        Settings.rewrittenmain.TargetStrafe = first
+    end
+)
+
+testSection:AddTextbox(
+    "Distance",
+    nil,
+    function(State)
+        Settings.rewrittenmain.StrafeRadius = State
+    end
+)
+
+testSection:AddTextbox(
+    "Height",
+    nil,
+    function(State)
+        Settings.rewrittenmain.StrafeHeight = State
+    end
+)
+
+testSection:AddTextbox(
+    "Speed",
+    nil,
+    function(State)
+        Settings.rewrittenmain.StrafeSpeed = State
+    end
+)
+ 
+local SelectedPart = "UpperTorso"                              
+local Prediction = true
+local PredictionValue = 0.24                            
+ 
+ 
+    local AnchorCount = 0
+    local MaxAnchor = 50
+ 
+    local CC = game:GetService"Workspace".CurrentCamera
+    local Plr;
+    local enabled = false
+    local accomidationfactor = 0.12348
+    local mouse = game.Players.LocalPlayer:GetMouse()
+    local placemarker = Instance.new("Part", game.Workspace)
+ 
+    function makemarker(Parent, Adornee, Color, Size, Size2)
+        local e = Instance.new("BillboardGui", Parent)
+        e.Name = "PP"
+        e.Adornee = Adornee
+        e.Size = UDim2.new(Size, Size2, Size, Size2)
+        e.AlwaysOnTop = Settings.rewrittenmain.DOT
+        local a = Instance.new("Frame", e)
+        if Settings.rewrittenmain.DOT == true then
+        a.Size = UDim2.new(2, 2, 2)
+        else
+        a.Size = UDim2.new(0, 0, 0, 0)
+        end
+        if Settings.rewrittenmain.DOT == true then
+        a.Transparency = 0
+        a.BackgroundTransparency = 0
+        else
+        a.Transparency = 1
+        a.BackgroundTransparency = 1
+        end
+        a.BackgroundColor3 = Color
+        local g = Instance.new("UICorner", a)
+        if Settings.rewrittenmain.DOT == false then
+        g.CornerRadius = UDim.new(0, 0)
+        else
+        g.CornerRadius = UDim.new(1, 1)
+        end
+        return(e)
+    end
+ 
+ 
+    local data = game.Players:GetPlayers()
+    function noob(player)
+        local character
+        repeat wait() until player.Character
+        local handler = makemarker(guimain, player.Character:WaitForChild(SelectedPart), Color3.fromRGB(68, 214, 44), 0.3, 3)
+        handler.Name = player.Name
+        player.CharacterAdded:connect(function(Char) handler.Adornee = Char:WaitForChild(SelectedPart) end)
+ 
+ 
+        spawn(function()                                    
+            while wait() do                                     
+                if player.Character then                                    
+                end                                    
+            end                                     
+        end)                                    
+    end                                    
+ 
+    for i = 1, #data do
+        if data[i] ~= game.Players.LocalPlayer then
+            noob(data[i])
+        end
+    end
+ 
+    game.Players.PlayerAdded:connect(function(Player)
+        noob(Player)
+    end)
+ 
+    spawn(function()
+        placemarker.Anchored = true
+        placemarker.CanCollide = false
+        if Settings.rewrittenmain.DOT == true then
+        placemarker.Size = Vector3.new(6, 6, 6)
+        else
+        placemarker.Size = Vector3.new(0, 0, 0)
+        end
+        placemarker.Transparency = 1
+        if Settings.rewrittenmain.DOT then
+        makemarker(placemarker, placemarker, Color3.fromRGB(68, 214, 44), 0.40, 0)
+        end
+    end)
+ 
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(k)
+        if k == Settings.rewrittenmain.Key and Settings.rewrittenmain.Enabled then
+            if enabled == true then
+                enabled = false
+                if Settings.rewrittenmain.NOTIF == true then
+                    Plr = getClosestPlayerToCursor()
+                game.StarterGui:SetCore("SendNotification", {
+						Title = "Lock Notification",
+						Text = "Unlocked",
+						Icon = "",
+						Duration = 1,
+})
+            end
+            else
+                Plr = getClosestPlayerToCursor()
+                enabled = true
+                if Settings.rewrittenmain.NOTIF == true then
+ 
+                    game.StarterGui:SetCore("SendNotification", {
+						Title = "Lock Notification",
+						Text = "Locked On :"..tostring(Plr.Name); 
+						Icon = "",
+						Duration = 1,
+})
+ 
+                end
+            end
+        end
+    end)
+ 
+ 
+ 
+    function getClosestPlayerToCursor()
+        local closestPlayer
+        local shortestDistance = Settings.rewrittenmain.FOV
+ 
+        for i, v in pairs(game.Players:GetPlayers()) do
+            if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Humanoid") and v.Character.Humanoid.Health ~= 0 and v.Character:FindFirstChild("HumanoidRootPart") then
+                local pos = CC:WorldToViewportPoint(v.Character.PrimaryPart.Position)
+                local magnitude = (Vector2.new(pos.X, pos.Y) - Vector2.new(mouse.X, mouse.Y)).magnitude
+                if magnitude < shortestDistance then
+                    closestPlayer = v
+                    shortestDistance = magnitude
+                end
+            end
+        end
+        return closestPlayer
+    end
+ 
+    local pingvalue = nil;
+    local split = nil;
+    local ping = nil;
+ 
+    game:GetService"RunService".Stepped:connect(function()
+        if enabled and Plr.Character ~= nil and Plr.Character:FindFirstChild("HumanoidRootPart") then
+            placemarker.CFrame = CFrame.new(Plr.Character.HumanoidRootPart.Position+(Plr.Character.HumanoidRootPart.Velocity*accomidationfactor))
+        else
+            placemarker.CFrame = CFrame.new(0, 9999, 0)
+        end
+        if Settings.rewrittenmain.AUTOPRED == true then
+             pingvalue = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
+             split = string.split(pingvalue,'(')
+             ping = tonumber(split[1])
+            if ping < 130 then
+                PredictionValue = 0.151
+            elseif ping < 125 then
+                PredictionValue = 0.149
+            elseif ping < 110 then
+                PredictionValue = 0.146
+            elseif ping < 105 then
+                PredictionValue = 0.138
+            elseif ping < 90 then
+                PredictionValue = 0.136
+            elseif ping < 80 then
+                PredictionValue = 0.134
+            elseif ping < 70 then
+                PredictionValue = 0.131
+            elseif ping < 60 then
+                PredictionValue = 0.1229
+            elseif ping < 50 then
+                PredictionValue = 0.1225
+            elseif ping < 40 then
+                PredictionValue = 0.1256
+            end
+        end
+    end)
+ 
+    local mt = getrawmetatable(game)
+    local old = mt.__namecall
+    setreadonly(mt, false)
+    mt.__namecall = newcclosure(function(...)
+        local args = {...}
+        if enabled and getnamecallmethod() == "FireServer" and args[2] == "UpdateMousePos" and Settings.rewrittenmain.Enabled and Plr.Character ~= nil then
+ 
+            -- args[3] = Plr.Character.HumanoidRootPart.Position+(Plr.Character.HumanoidRootPart.Velocity*accomidationfactor)
+            --[[
+            if Settings.rewrittenmain.AIRSHOT == true then
+                if game.Workspace.Players[Plr.Name].Humanoid:GetState() == Enum.HumanoidStateType.Freefall then -- Plr.Character:WaitForChild("Humanoid"):GetState() == Enum.HumanoidStateType.Freefall
+ 
+                    --// Airshot
+                    args[3] = Plr.Character.LeftFoot.Position+(Plr.Character.LeftFoot.Velocity*PredictionValue)
+                else
+                    args[3] = Plr.Character.HumanoidRootPart.Position+(Plr.Character.HumanoidRootPart.Velocity*PredictionValue)
+                end
+            else
+                    args[3] = Plr.Character.HumanoidRootPart.Position+(Plr.Character.HumanoidRootPart.Velocity*PredictionValue)
+            end
+            ]]
+            if Prediction == true then
+ 
+            args[3] = Plr.Character[SelectedPart].Position+(Plr.Character[SelectedPart].Velocity*PredictionValue)
+ 
+            else
+ 
+            args[3] = Plr.Character[SelectedPart].Position
+ 
+            end
+ 
+            return old(unpack(args))
+        end
+        return old(...)
+    end)
+ 
+    game:GetService("RunService").RenderStepped:Connect(function()
+        if Settings.rewrittenmain.RESOVLER == true and Plr.Character ~= nil and enabled and Settings.rewrittenmain.Enabled then
+        if Settings.rewrittenmain.AIRSHOT == true and enabled and Plr.Character ~= nil then
+ 
+            if game.Workspace.Players[Plr.Name].Humanoid:GetState() == Enum.HumanoidStateType.Freefall then -- Plr.Character:WaitForChild("Humanoid"):GetState() == Enum.HumanoidStateType.Freefall
+ 
+                --// Airshot
+ 
+                --// Anchor Check
+ 
+                if Plr.Character ~= nil and Plr.Character.HumanoidRootPart.Anchored == true then
+                    AnchorCount = AnchorCount + 1
+                    if AnchorCount >= MaxAnchor then
+                        Prediction = false
+                        wait(2)
+                        AnchorCount = 0;
+                    end
+                else
+                    Prediction = true
+                    AnchorCount = 0;
+                end
+ 
+                SelectedPart = "HumanoidRootPart"
+ 
+            else
+                --// Anchor Check
+ 
+                if Plr.Character ~= nil and Plr.Character.HumanoidRootPart.Anchored == true then
+                    AnchorCount = AnchorCount + 1
+                    if AnchorCount >= MaxAnchor then
+                        Prediction = false
+                        wait(2)
+                        AnchorCount = 0;
+                    end
+                else
+                    Prediction = true
+                    AnchorCount = 0;
+                end
+ 
+                SelectedPart = "HumanoidRootPart"
+ 
+            end
+            else
+ 
+                --// Anchor Check
+ 
+                if Plr.Character ~= nil and Plr.Character.HumanoidRootPart.Anchored == true then
+                    AnchorCount = AnchorCount + 1
+                    if AnchorCount >= MaxAnchor then
+                        Prediction = false
+                        wait(2)
+                        AnchorCount = 0;
+                    end
+                else
+                    Prediction = true
+                    AnchorCount = 0;
+                end
+ 
+                SelectedPart = "HumanoidRootPart"
+            end
+ 
+        else
+                SelectedPart = "HumanoidRootPart"
+        end
+    end)
+    
+    game:GetService("RunService").Stepped:connect(
+    function()
+if Settings.rewrittenmain.TargetStrafe == true and enabled then
+            local lp = game.Players.LocalPlayer.Character
+
+            local targpos = Plr.Character.HumanoidRootPart.Position
+
+            lp:SetPrimaryPartCFrame(
+                CFrame.new(
+                    targpos +
+                        Vector3.new(
+                            math.cos(tick() * Settings.rewrittenmain.StrafeSpeed) * Settings.rewrittenmain.StrafeRadius,
+                            Settings.rewrittenmain.StrafeHeight,
+                            math.sin(tick() * Settings.rewrittenmain.StrafeSpeed) * Settings.rewrittenmain.StrafeRadius
+                        )
+                )
+            )
+
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                CFrame.new(
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Position,
+                Vector3.new(targpos.X, game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Position.Y, targpos.Z)
+            )
+
+            game:GetService("Players").LocalPlayer.Character.Humanoid.AutoRotate = false
+        else
+            game:GetService("Players").LocalPlayer.Character.Humanoid.AutoRotate = true
+        end
+    end
+)
+ 
+--the TargetLock
+ 
+getgenv().Prediction = 0.143105125985120958176	
+getgenv().AimPart = "UpperTorso"	
+getgenv().Key = "Q"	
+getgenv().DisableKey = "P"	
+ 
+getgenv().FOV = true	
+getgenv().ShowFOV = false	
+getgenv().FOVSize = 55	
+ 
+--// Variables (Service)	
+ 
+local Players = game:GetService("Players")	
+local RS = game:GetService("RunService")	
+local WS = game:GetService("Workspace")	
+local GS = game:GetService("GuiService")	
+local SG = game:GetService("StarterGui")	
+ 
+--// Variables (regular)	
+ 
+local LP = Players.LocalPlayer	
+local Mouse = LP:GetMouse()	
+local Camera = WS.CurrentCamera	
+local GetGuiInset = GS.GetGuiInset	
+ 
+local AimlockState = true	
+local Locked	
+local Victim	
+ 
+local SelectedKey = getgenv().Key	
+local SelectedDisableKey = getgenv().DisableKey	
+ 
+--// Check if aimlock is loaded	
+ 
+if getgenv().Loaded == true then	
+    Notify("Aimlock is already loaded!")	
+    return	
+end	
+ 
+getgenv().Loaded = true	
+ 
+--// FOV Circle	
+ 
+local fov = Drawing.new("Circle")	
+fov.Filled = false
