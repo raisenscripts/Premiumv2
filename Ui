@@ -1,42 +1,33 @@
 local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
 
-
 local window = DrRayLibrary:Load("Raisen Premium", "Default")
 
+local lockRageTab = DrRayLibrary.newTab("Lock/Rage", "ImageIdHere")
 
-local tab = DrRayLibrary.newTab("Lock/Rage", "ImageIdHere")
-
-
-tab.newButton("Orbit/cam Gui", "Open Orbit Gui.", function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/raisenscripts/Premiumv2/main/Raisen-AuraX"))()
+lockRageTab.newButton("Orbit/cam Gui", "Open Orbit Gui.", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/raisenscripts/Premiumv2/main/Raisen-AuraX"))()
 end)
 
-
-tab.newButton("Blatant", "Blatant&pc&mobile", function()
-    loadstring(game:Httpget("https://raw.githubusercontent.com/raisenscripts/Premiumv2/main/Zombie%20animation"))()
+lockRageTab.newButton("Blatant", "Blatant&pc&mobile", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/raisenscripts/Premiumv2/main/Zombie%20animation"))()
 end)
 
-
-tab.newButton("Anti-Lock", "Insane level anti", function()
-    loadstring(game:Httpget("https://raw.githubusercontent.com/raisenscripts/Premiumv2/main/Antilock"))()
+lockRageTab.newButton("Anti-Lock", "Insane level anti", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/raisenscripts/Premiumv2/main/Antilock"))()
 end)
 
-
-tab.newButton("Tp walk v4", "Recommended for silent aim.", function()
+lockRageTab.newButton("Tp walk v4", "Recommended for silent aim.", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/TheRealXORA/Roblox-Scripts/main/Tpwalk%20V4%20%5B%20BETA%20%5D.lua", true))()
 end)
 
+local otherGuisTab = DrRayLibrary.newTab("Other guis", "ImageIdHere")
 
-local tab = DrRayLibrary.newTab("Other guis", "ImageIdHere")
-
-
-tab.newButton("Swagmode", "Swagmode v4", function()
-    loadstring(game:Httpget("https://raw.githubusercontent.com/lerkermer/lua-projects/master/SwagModeV002"))()
+otherGuisTab.newButton("Swagmode", "Swagmode v4", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/lerkermer/lua-projects/master/SwagModeV002"))()
 end)
 
-local tab = DrRayLibrary.newTab("Mısc" , "ImageIdHere")
+local miscTab = DrRayLibrary.newTab("Misc", "ImageIdHere")
 
-
-tab.newButton("Zombie Animation", "get *Fe* zombie animation", function()
-    loadstring(game:Httpget("https://raw.githubusercontent.com/raisenscripts/Premiumv2/main/Zombie%20animation"))()
+miscTab.newButton("Zombie Animation", "get *Fe* zombie animation", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/raisenscripts/Premiumv2/main/Zombie%20animation"))()
 end)
