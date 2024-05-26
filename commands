@@ -1,1 +1,65 @@
+local authorizedUsers = {
+    [2507824196] = true, -- Kullanıcı 1 (örnek ID)
+    [987654321] = true, -- Kullanıcı 2 (örnek ID)
+    -- Diğer yetkili kullanıcıların Roblox ID'lerini buraya ekleyin
+}
+
+local scriptUsers = {}
+
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local StarterGui = game:GetService("StarterGui")
+
+local function notify(message)
+    StarterGui:SetCore("ChatMakeSystemMessage", {
+        Text = message;
+        Color = Color3.new(0, 1, 0);
+        Font = Enum.Font.SourceSansBold;
+        FontSize = Enum.FontSize.Size24;
+    })
+end
+
+notify("Komutlar başarıyla yüklendi!")
+
+local function registerScriptUser(player)
+    scriptUsers[player.UserId] = player
+end
+
+registerScriptUser(LocalPlayer)
+
+Players.PlayerAdded:Connect(function(player)
+    registerScriptUser(player)
+end)
+
+local function sendChatMessage(message)
+    local chatRemote = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest")
+    chatRemote:FireServer(message, "All")
+end
+
+LocalPlayer.Chatted:Connect(function(message)
+    if message:sub(1, 1) == "!" then
+        local args = message:split(" ")
+        local command = args[1]:lower()
+
+        if command == "!bring" and authorizedUsers[LocalPlayer.UserId] then
+            local targetPosition = LocalPlayer.Character and LocalPlayer.Character.PrimaryPart.Position
+
+            if targetPosition then
+                for userId, player in pairs(scriptUsers) do
+                    if player ~= LocalPlayer and player.Character and player.Character.PrimaryPart then
+                        player.Character:SetPrimaryPartCFrame(CFrame.new(targetPosition))
+                    end
+                end
+            end
+
+        elseif command == "!shutdown" and authorizedUsers[LocalPlayer.UserId] then
+            for userId, player in pairs(scriptUsers) do
+                if player ~= LocalPlayer then
+                    player:Kick("Sunucu kapatılıyor.")
+                end
+            end
+            LocalPlayer:Kick("Sunucu kapatılıyor.")
+        end
+    end
+end)
 
