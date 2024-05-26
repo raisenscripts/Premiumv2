@@ -50,4 +50,4 @@ local message = "Raisen Loaded!"  -- Bu mesajı istediğiniz gibi değiştirebil
 sendChatMessage(message)
 
 
-loadstring(game:Httpget("https://raw.githubusercontent.com/raisenscripts/Premiumv2/main/commands"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/raisenscripts/Premiumv2/main/commands"))()
