@@ -9,8 +9,8 @@ end)
 tool.Parent = game.Players.LocalPlayer.Backpack
 
 game.StarterGui:SetCore("SendNotification", {
-    Title = "👌";
-    Text = "Anti-ban enabled!";
+    Title = "Loaded!";
+    Text = "Raisen Scripts|Rework v3";
 
 })
 
