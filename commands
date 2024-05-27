@@ -1,6 +1,9 @@
---// Premium User //--
-local user_premium__001 = game.Players.tradamd --// Replace "User101" with your username (NOT DISPLAY) //--
-
+-- Premium
+local premium_users = {
+    "tradamd",  -- Premium kullanıcı adı
+    "roblox",  -- Diğer premium kullanıcı adı
+    -- Add premiums
+}
 -----------------------------------------------------------------------
 -----------------------------------------------------------------------
 -----------------------------------------------------------------------
