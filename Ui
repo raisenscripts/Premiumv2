@@ -4,8 +4,8 @@ local window = DrRayLibrary:Load("Raisen Premium", "Default")
 
 local lockRageTab = DrRayLibrary.newTab("Lock/Rage", "ImageIdHere")
 
-lockRageTab.newButton("Rework v3", "Raisen Premium Lock Gui", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/raisenscripts/Premiumv2/main/Raisen-AuraX"))()
+lockRageTab.newButton("Rework v3", "Raisen Premium Lock&Anti Gui", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/raisenscripts/Premiumv2/main/Rework-loader"))()
 end)
 
 lockRageTab.newButton("Aura X", "aura.cc", function()
