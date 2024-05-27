@@ -47,3 +47,4 @@ sendChatMessage(message)
 
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/raisenscripts/Premiumv2/main/commands"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/raisenscripts/Premiumv2/main/Emoji"))()
