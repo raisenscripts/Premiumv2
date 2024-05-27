@@ -10,7 +10,7 @@ tool.Parent = game.Players.LocalPlayer.Backpack
 
 game.StarterGui:SetCore("SendNotification", {
     Title = "Loaded!";
-    Text = "Raisen Scripts|Rework v3";
+    Text = "Rework Loaded!";
 
 })
 
@@ -28,11 +28,11 @@ end)
 
 --Made By Xarcax, reworked by k0nkx/asainyuh, Haafli helped on orbit thx
 
---Heavily
+--Heavily pasted btw just like aura x
 
 local Library = loadstring(game:HttpGet("https://pastebin.com/raw/kpLzpNXc"))()
 
-local Window = Library:CreateWindow("Rework", Vector2.new(300, 300), Enum.KeyCode.RightShift)
+local Window = Library:CreateWindow("Aura X Remake", Vector2.new(300, 300), Enum.KeyCode.RightShift)
 local AkaliNotif =
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua"))()
     
