@@ -1,5 +1,5 @@
 -- Premium
-local premium_users = {
+local user_premium__001 = {
     "tradamd",  -- Premium kullanıcı adı
     "roblox",  -- Diğer premium kullanıcı adı
     -- Add premiums
