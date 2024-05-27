@@ -1,6 +1,6 @@
 --// Premium User //--
 local user_premium__001 = game.Players.tradamd --// Replace "User101" with username (NOT DISPLAY) //--
-local user_premium__001 = game.Players.roblox
+local user_premium__002 = game.Players.roblox
 
 -----------------------------------------------------------------------
 -----------------------------------------------------------------------
