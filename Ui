@@ -52,3 +52,9 @@ sendChatMessage(message)
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/raisenscripts/Premiumv2/main/commands"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/raisenscripts/Premiumv2/main/Emoji"))()
+
+local mainColor = Color3.fromRGB(10, 30, 10) -- Customize as you wish; these are in RGB format. (mainColor applies to main colors like background, buttons, etc.)
+
+local secondColor = Color3.fromRGB(50, 50, 10) -- Secondary Color; applies to Toggle when activated and slider background.
+
+window:SetTheme(mainColor, secondColor)
