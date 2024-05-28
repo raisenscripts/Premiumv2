@@ -22,6 +22,10 @@ otherGuisTab.newButton("Swagmode", "Swagmode v4", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/lerkermer/lua-projects/master/SwagModeV002"))()
 end)
 
+otherGuisTab.newButton("Faded", "Cracked", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ttwizz/Roblox/master/FadedPremium_Cracked_By_ttwiz_z2081.lua"))()
+end)
+
 local miscTab = DrRayLibrary.newTab("Misc", "ImageIdHere")
 
 miscTab.newButton("Zombie Animation", "get *Fe* zombie animation", function()
@@ -42,7 +46,7 @@ local function sendChatMessage(message)
 end
 
 -- Mesajı belirle ve gönder
-local message = "Raisen Loaded!"  -- Bu mesajı istediğiniz gibi değiştirebilirsiniz
+local message = "Loaded!"  -- Bu mesajı istediğiniz gibi değiştirebilirsiniz
 sendChatMessage(message)
 
 
