@@ -292,6 +292,6 @@ else
 game:GetService("StarterGui"):SetCore("SendNotification",{
 	Title = "No premium!";
 	Text = "D:";
-	Time = 10;
+	Time = 5;
 })
 end
