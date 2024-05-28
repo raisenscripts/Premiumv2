@@ -1,11 +1,11 @@
 local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
 
-local window = DrRayLibrary:Load("Raisen Premium", "Default")
+local window = DrRayLibrary:Load("Raisen | Still in beta", "Default")
 
-local lockRageTab = DrRayLibrary.newTab("Lock/Rage", "ImageIdHere")
+local lockRageTab = DrRayLibrary.newTab("Main", "ImageIdHere")
 
-lockRageTab.newButton("Rework v3", "Raisen Premium Lock&Anti Gui", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/raisenscripts/Premiumv2/main/Rework-loader"))()
+lockRageTab.newButton("Rework v3", "Raisen Loc&Orbit Gui", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/raisenscripts/Premiumv2/main/Rework"))()
 end)
 
 lockRageTab.newButton("Aura X", "aura.cc", function()
