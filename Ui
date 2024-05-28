@@ -4,8 +4,8 @@ local window = DrRayLibrary:Load("Raisen | Still in beta", "Default")
 
 local lockRageTab = DrRayLibrary.newTab("Main", "ImageIdHere")
 
-lockRageTab.newButton("Rework v3", "Raisen Loc&Orbit Gui", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/raisenscripts/Premiumv2/main/Rework"))()
+lockRageTab.newButton("Nyula", "Raisen | Nyula", function()
+    loadstring(game:HttpGet("https://nyulachan.github.io/nyula/Nyula/nyula"))()
 end)
 
 lockRageTab.newButton("Aura X", "aura.cc", function()
