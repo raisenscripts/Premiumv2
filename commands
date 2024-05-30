@@ -290,7 +290,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 })
 else
 game:GetService("StarterGui"):SetCore("SendNotification",{
-	Title = "No premium!";
+	Title = "No commands!";
 	Text = "D:";
 	Time = 5;
 })
