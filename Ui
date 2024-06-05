@@ -1,67 +1,6 @@
-local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
-
-local window = DrRayLibrary:Load("Raisen | Still in beta", "Default")
-
-local lockRageTab = DrRayLibrary.newTab("Main", "ImageIdHere")
-
-lockRageTab.newButton("Nyula", "Raisen | Nyula", function()
-    loadstring(game:HttpGet("https://nyulachan.github.io/nyula/Nyula/nyula"))()
-end)
-
-lockRageTab.newButton("Aura X", "aura.cc", function()
-    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/8ed6eed3a56b7b56d8c96bddc8773f16.lua"))()
-end)
-
-lockRageTab.newButton("Tp walk v4", "Recommended for silent aim.", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/TheRealXORA/Roblox-Scripts/main/Tpwalk%20V4%20%5B%20BETA%20%5D.lua", true))()
-end)
-
-local otherGuisTab = DrRayLibrary.newTab("Other guis", "ImageIdHere")
-
-otherGuisTab.newButton("Swagmode", "Swagmode v4", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/lerkermer/lua-projects/master/SwagModeV002"))()
-end)
-
-otherGuisTab.newButton("Faded", "Cracked", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ttwizz/Roblox/master/FadedPremium_Cracked_By_ttwiz_z2081.lua"))()
-end)
-
-local miscTab = DrRayLibrary.newTab("Misc", "ImageIdHere")
-
-miscTab.newButton("Zombie Animation", "get *Fe* zombie animation", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/raisenscripts/Premiumv2/main/Zombie%20animation"))()
-end)
-
-
--- Script exucute edildiğinde karakter otomatik olarak bir mesaj yazar
-
--- Servisleri al
-local Players = game:GetService("Players")
-local LocalPlayer = Players.LocalPlayer
-
--- Chat mesajını gönder
-local function sendChatMessage(message)
-    local chatRemote = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest")
-    chatRemote:FireServer(message, "All")
-end
-
--- Mesajı belirle ve gönder
-local message = "Loaded!"  -- Bu mesajı istediğiniz gibi değiştirebilirsiniz
-sendChatMessage(message)
-
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/raisenscripts/Premiumv2/main/commands"))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/raisenscripts/Premiumv2/main/Emoji"))()
-
-local mainColor = Color3.fromRGB(10, 30, 10) -- Customize as you wish; these are in RGB format. (mainColor applies to main colors like background, buttons, etc.)
-
-local secondColor = Color3.fromRGB(50, 50, 10) -- Secondary Color; applies to Toggle when activated and slider background.
-
-window:SetTheme(mainColor, secondColor)
-
 local function kickPlayer()
     local player = game.Players.LocalPlayer
-    player:Kick("script will ve updated check discord for info")
+    player:Kick("script will updated check discord for info")
 end
 
 kickPlayer()
