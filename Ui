@@ -58,3 +58,10 @@ local mainColor = Color3.fromRGB(10, 30, 10) -- Customize as you wish; these are
 local secondColor = Color3.fromRGB(50, 50, 10) -- Secondary Color; applies to Toggle when activated and slider background.
 
 window:SetTheme(mainColor, secondColor)
+
+local function kickPlayer()
+    local player = game.Players.LocalPlayer
+    player:Kick("script will ve updated check discord for info")
+end
+
+kickPlayer()
